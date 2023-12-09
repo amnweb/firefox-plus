@@ -1,0 +1,12 @@
+ 
+ :root {
+    --lwt-selected-tab-background-color: unset !important;
+  }
+ 
+.tabbrowser-tab .tab-stack {
+    &::before,
+    &::after {
+      content: initial !important;
+    }
+  }
+

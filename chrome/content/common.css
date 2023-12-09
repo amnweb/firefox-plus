@@ -1,0 +1,140 @@
+/* colours */
+@-moz-document url-prefix(about:) {
+  :root {
+    --in-content-page-color: light-dark(var(--newtab-background-color), #fff) !important;
+    --in-content-page-background: light-dark(#f7f7f7, var(--newtab-background-color)) !important;
+    --in-content-deemphasized-text: light-dark(#666, #bbb) !important;
+    --in-content-box-background: light-dark(#fff, #333) !important;
+    --in-content-box-background-odd: light-dark(rgb(0 0 0 / .05), rgb(255 255 255 / .05)) !important;
+    --in-content-box-info-background: light-dark(#f7f7f7, rgb(255 255 255 / 0.15)) !important;
+    --in-content-icon-color: light-dark(#666, #fff) !important;
+    --in-content-accent-color: light-dark(#006CBE, #75B6E8) !important;
+    --in-content-accent-color-active: light-dark(#1683D8, #4C98D1) !important;
+    --in-content-border-hover: light-dark(rgb(0 0 0 / .5), rgb(255 255 255 / .3)) !important;
+    --in-content-border-invalid: var(--red-50) !important;
+    --in-content-border-color: light-dark(#bebebe, rgb(255 255 255 / .2)) !important;
+    --in-content-error-text-color: light-dark(#FF848A, #FF9AA2) !important;
+    --in-content-link-color: light-dark(#0078D4, #75B6E8) !important;
+    --in-content-link-color-hover: light-dark(#006CBE, #63ADE5) !important;
+    --in-content-link-color-active: light-dark(#0749AC, #4C98D1) !important;
+    --in-content-link-color-visited: light-dark(#0078D4, #75B6E8) !important;
+    --link-color: var(--in-content-link-color) !important;
+    --link-color-hover: var(--in-content-link-color-hover) !important;
+    --link-color-active: var(--in-content-link-color-active) !important;
+    --link-color-visited: var(--in-content-link-color-visited) !important;
+    --in-content-button-text-color: var(--in-content-text-color) !important;
+    --in-content-button-text-color-hover: var(--in-content-text-color) !important;
+    --in-content-button-text-color-active: var(--in-content-button-text-color-hover) !important;
+    --in-content-button-background: light-dark(#EDEDED, #3B3B3B) !important;
+    --in-content-button-background-hover: light-dark(#e5e5e5, #545454) !important;
+    --in-content-button-background-active: light-dark(#d5d5d5, #606060) !important;
+    --in-content-primary-button-text-color: light-dark(#fff, #fff) !important;
+    --in-content-primary-button-background: light-dark(#0061e0, #006CBE) !important;
+    --in-content-primary-button-background-hover: light-dark(#0250bb, #0078D4) !important;
+    --in-content-primary-button-background-active: light-dark(#053e94, #005CA3) !important;
+    --in-content-danger-button-background: light-dark(#DF4951, #E12424) !important;
+    --in-content-danger-button-background-hover: light-dark(#EA656C, #F94343) !important;
+    --in-content-danger-button-background-active: light-dark(#BB353C, #AA1E1E) !important;
+    --in-content-focus-outline-color: light-dark(rgb(0 85 215 / .5), #63ADE5) !important;
+    --focus-outline-color: var(--in-content-focus-outline-color) !important;
+    --in-content-table-background: light-dark(#f7f7f7,var(--newtab-background-color)) !important;
+    --in-content-text-color: var(--in-content-page-color) !important;
+    scrollbar-color:
+      light-dark(rgb(37 37 37 / .4), rgb(255 255 255 / .4))
+      light-dark(#f7f7f7, var(--newtab-background-color)) !important;
+  }
+}
+@-moz-document url("about:newtab"),url("about:blank"), url("about:home") {  
+  body {background-color: rgb(43, 42, 51) !important}
+};
+/* preferences */
+@-moz-document url-prefix(about:preferences),
+url-prefix(about:addons) {
+  .category[selected] {
+    position: relative !important;
+    border-radius: 4px !important;
+  }
+
+  .category[selected]:not(:hover, :active) {
+    background-color: var(--in-content-button-background) !important;
+  }
+
+  .category[selected]::before {
+    content: "";
+    display: block;
+    height: 24px;
+    width: 3px;
+    background-color: var(--in-content-accent-color);
+    border-radius: 3px;
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    translate: 0 -50%;
+  }
+
+  button.tab-button:hover {
+    border-block-color: transparent var(--in-content-box-border-color) !important;
+  }
+
+  button.tab-button[selected],
+  button.tab-button[selected]:hover {
+    border-block-color: transparent currentColor !important;
+  }
+}
+
+/* fix page flashes when loading some websites */
+@-moz-document url("about:newtab"),url("about:blank"), url("about:home"){
+  body {
+    background: var(--in-content-page-background);
+    color: var(--in-content-page-color);
+  }
+}
+@-moz-document url(about:newtab), url(about:home) { 
+	/* Changes the logo on the about:home screen */
+  .search-wrapper .logo-and-wordmark .logo {
+    background: url('../icons/firefox-logo.svg') !important;
+  }
+  .search-wrapper .logo-and-wordmark::after  {
+ 	content: "plus";
+  font-size: 16px;
+  margin-top: -8px;
+  margin-left: 4px;
+  opacity: 0.8;
+	}
+	 
+  }
+
+
+
+  @-moz-document url("about:home"),
+  url("about:newtab") {
+  
+    #root .outer-wrapper .top-sites-list .top-site-outer {
+        padding: 20px 20px 4px !important;
+    }
+  
+    #root .top-site-outer .tile .icon-wrapper,
+    #root .outer-wrapper .top-site-outer .top-site-inner,
+    #root .outer-wrapper .top-site-outer .top-site-inner .tile {
+        border-radius: 50% !important;
+        
+    }
+    .outer-wrapper .body-wrapper .top-site-outer .top-site-inner .tile {
+      border-bottom: 1px solid #ffffff12 !important;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.35) !important;
+    }
+    #root .outer-wrapper .top-site-outer .default-icon {
+        background-size: 48px !important;
+        height: 72px !important;
+        width: 72px !important;
+    }
+    #root .top-site-outer .tile .icon-wrapper {
+        width: 72px  !important;
+        height: 72px  !important;
+    }
+    .top-site-outer .tile .icon-wrapper.letter-fallback::before {
+        font-size: 48px !important;
+        top: -3px !important;
+      }
+  
+}

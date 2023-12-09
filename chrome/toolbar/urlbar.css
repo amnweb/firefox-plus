@@ -1,0 +1,240 @@
+:root {
+  --urlbar-min-height: 30px !important;
+  --urlbarView-item-inline-padding: 14px !important;
+  --urlbar-icon-border-radius: calc(var(--toolbarbutton-border-radius) + 14px) !important;
+  --urlbar-icon-padding: calc(var(--toolbarbutton-inner-padding) - 2px) !important;
+  --fp-urlbar-icon-inline-padding: calc(var(--fp-toolbarbutton-inner-inline-padding) - 2px) !important;
+  --identity-box-margin-inline: 2px !important;
+}
+:root[style*="--lwt-accent-color: rgb(240, 240, 244)"] #urlbar[focused="true"]:not([suppress-focus-border])>#urlbar-background,
+:root[style*="--lwt-accent-color: rgb(240, 240, 244)"] #searchbar:focus-within {
+  outline-color: color-mix(in srgb, var(--toolbar-field-focus-border-color) 50%, transparent) !important;
+}
+
+@media not (-moz-gtk-csd-available) {
+  #urlbar[focused="true"]:not([suppress-focus-border])>#urlbar-background:not(:-moz-lwtheme),
+  #searchbar:not(:-moz-lwtheme):focus-within {
+    --fp-outline-dimmed: color-mix(in srgb, var(--toolbar-field-focus-border-color) 50%, transparent);
+    outline-color: light-dark(var(--fp-outline-dimmed), var(--toolbar-field-focus-border-color)) !important;
+  }
+}
+
+:root:not([lwtheme-brighttext="true"]) #urlbar-background {
+  box-shadow: var(--fp-urlbar-shadow, none);
+}
+
+#urlbar[open]>#urlbar-background {
+  border-color: transparent !important;
+  box-shadow: 0 10px 16px #0005, 0 0 1px #0006 !important;
+}
+
+.urlbarView {
+  margin-inline: 0 !important;
+  width: 100% !important;
+  border-inline: 0 !important;
+}
+
+.urlbarView-row {
+  padding-block: 0 !important;
+}
+
+.urlbarView-row-inner {
+  border-radius: 0 !important;
+  padding-block: 8px !important;
+}
+
+.urlbarView-row:not([type="tip"], [type="dynamic"])[selected]>.urlbarView-row-inner,
+.urlbarView-row-inner[selected] {
+  box-shadow: 3px 0 var(--toolbar-field-focus-border-color) inset !important;
+}
+
+#urlbar-anon-search-settings {
+  margin-inline-end: 8px !important;
+}
+
+#urlbar .search-one-offs:not([hidden]) {
+  padding-block: 8px 0 !important;
+}
+
+/* breakout */
+#urlbar[breakout][breakout-extend] {
+  left: 0 !important;
+  width: 100% !important;
+}
+
+#urlbar[breakout][breakout-extend]>#urlbar-input-container {
+  padding-inline: var(--urlbar-container-padding) !important;
+}
+
+.urlbarView-results {
+  padding-block: 0 !important;
+}
+
+#urlbar[open]>.urlbarView>.urlbarView-body-outer>.urlbarView-body-inner,
+.urlbarView:not([noresults])>.search-one-offs:not([hidden]) {
+  border-top: 0 !important;
+}
+
+/* urlbar spacing */
+#urlbar-container {
+  --urlbar-container-height: calc(8px + 16px + var(--toolbarbutton-inner-padding) * 2) !important;
+}
+
+#urlbar {
+  --urlbar-toolbar-height: calc(8px + 16px + var(--toolbarbutton-inner-padding) * 2) !important;
+  --urlbar-height: calc(16px + var(--toolbarbutton-inner-padding) * 2) !important;
+}
+
+#urlbar-container,
+#search-container {
+  margin-inline: 6px !important;
+}
+
+.urlbar-page-action,
+#urlbar-go-button,
+.search-go-button,
+#tracking-protection-icon-container,
+#identity-icon-box {
+  padding-inline: var(--fp-urlbar-icon-inline-padding) !important;
+  width: calc(var(--fp-urlbar-icon-inline-padding) * 2 + 16px) !important;
+}
+
+#identity-box[pageproxystate="valid"].notSecureText>.identity-box-button,
+#identity-box[pageproxystate="valid"].chromeUI>.identity-box-button,
+#identity-box[pageproxystate="valid"].extensionPage>.identity-box-button,
+#urlbar-label-box {
+  width: unset !important;
+}
+
+#identity-icon-box,
+#identity-permission-box,
+.notification-anchor-icon {
+  padding-inline: var(--fp-urlbar-icon-inline-padding) !important;
+}
+
+#urlbar-background,
+#searchbar {
+  border-radius: var(--urlbar-icon-border-radius) !important;
+}
+
+#urlbar:hover:not([suppress-focus-border])>#urlbar-background,
+#searchbar:hover {
+  outline: 1.5px solid var(--urlbar-hover-highlight-color);
+}
+
+/* move tracking protection button */
+#tracking-protection-icon-container,
+#page-action-buttons {
+  -moz-box-ordinal-group: 2 !important;
+  order: 2 !important;
+}
+
+#urlbar, #searchbar {
+  padding: 0 4px !important;
+}
+
+@media (max-width: 450px) {
+  #urlbar-container:not(:hover) #pageActionButton {
+    visibility: collapse !important;
+  }
+}
+
+@media (max-width: 570px) {
+  #urlbar-container {
+    min-width: 206px !important;
+  }
+
+  #nav-bar-customization-target:not(:hover) #downloads-button:not([open]) {
+    visibility: collapse !important;
+  }
+}
+
+#urlbar[focused="true"]:not([suppress-focus-border])>#urlbar-background,
+#searchbar:focus-within {
+  outline-offset: calc(var(--focus-outline-width) * -1 + 1px) !important;
+}
+
+.urlbarView {
+  padding-block-end: 8px !important;
+}
+
+.urlbarView-row[pinned]>.urlbarView-row-inner>.urlbarView-no-wrap>.urlbarView-type-icon {
+  fill: var(--toolbar-field-color) !important;
+}
+
+#userContext-icons,
+#urlbar-zoom-button {
+  padding-inline: var(--fp-urlbar-icon-inline-padding) !important;
+  margin-block: 0 !important;
+  margin-inline: 0 !important;
+}
+
+/* make urlbar icons opaque in default theme */
+#urlbar-input::placeholder,
+.searchbar-textbox::placeholder {
+  opacity: 0.6 !important;
+}
+
+:is(:root:not(:-moz-lwtheme), :root[style*="--lwt-accent-color: rgb(240, 240, 244)"]) #identity-icon-label {
+  opacity: var(--urlbar-icon-fill-opacity) !important;
+}
+
+#notification-popup-box:hover {
+  background-color: var(--urlbar-box-hover-bgcolor) !important;
+}
+
+#notification-popup-box:hover:active,
+#notification-popup-box[open] {
+  background-color: var(--urlbar-box-active-bgcolor) !important;
+}
+
+/* remove background from urlbar box */
+#identity-box[pageproxystate="valid"].notSecureText>.identity-box-button:not(:hover, [open]),
+#identity-box[pageproxystate="valid"].chromeUI>.identity-box-button:not(:hover, [open]),
+#identity-box[pageproxystate="valid"].extensionPage>.identity-box-button:not(:hover, [open]) {
+  background-color: transparent !important;
+}
+
+:is(:root:not(:-moz-lwtheme),
+  :root[style*="--lwt-accent-color: rgb(240, 240, 244)"] #urlbar[focused="true"],
+  :root[lwt-default-theme-in-dark-mode="true"],
+  :root[style*="--lwt-accent-color: rgb(28, 27, 34)"]) #urlbar-search-mode-indicator {
+  background-color: var(--urlbar-box-hover-bgcolor) !important;
+}
+
+/* increase space between icon and text */
+#identity-icon-label {
+  padding-inline-start: 8px !important;
+}
+
+/* separator for urlbar box */
+#identity-box {
+  position: relative;
+}
+
+:is(#identity-box[pageproxystate="valid"].notSecureText>.identity-box-button,
+  #identity-box[pageproxystate="valid"].chromeUI>.identity-box-button,
+  #identity-box[pageproxystate="valid"].extensionPage>.identity-box-button)::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 16px;
+  border-right: 1px solid currentColor;
+  right: 0;
+  top: calc((var(--urlbar-height) / 2 - 1px - var(--urlbar-container-padding)) - 8px);
+  opacity: 0;
+}
+
+@media not (prefers-reduced-motion) {
+  :is(#identity-box[pageproxystate="valid"].notSecureText>.identity-box-button,
+    #identity-box[pageproxystate="valid"].chromeUI>.identity-box-button,
+    #identity-box[pageproxystate="valid"].extensionPage>.identity-box-button)::after {
+    transition: opacity 0.2s ease;
+  }
+}
+
+:is(#identity-box[pageproxystate="valid"].notSecureText>.identity-box-button:not(:hover, [open]),
+  #identity-box[pageproxystate="valid"].chromeUI>.identity-box-button:not(:hover, [open]),
+  #identity-box[pageproxystate="valid"].extensionPage>.identity-box-button:not(:hover, [open]))::after {
+  opacity: 0.375;
+}
