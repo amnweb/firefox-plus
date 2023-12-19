@@ -1,6 +1,6 @@
 :root {
   --tab-block-margin: 8px !important;
-  
+   --tab-selected-bgcolor: var(--toolbar-bgcolor) !important;
   & #titlebar {
     --tab-min-height: 32px !important;
     --inline-tab-padding: 11px !important;
