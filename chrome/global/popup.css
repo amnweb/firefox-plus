@@ -35,8 +35,9 @@
   --fp-contextmenu-menuitem-margin: var(--fp-contextmenu-menuitem-margin-block) var(--fp-contextmenu-menuitem-margin-inline);
   --fp-contextmenu-separator-vertical: calc(4px - var(--fp-contextmenu-menuitem-border-width));
   --fp-contextmenu-separator-horizontal: 0;
+  --fp-contextmenu-bgcolor: light-dark(Menu, rgb(43 42 51 / 0.95));
 }
-
+ 
 /* app menu */
 .addon-banner-item,
 .panel-banner-item {
@@ -341,6 +342,9 @@
   color: inherit !important;
 }
 
+
+
+
 .ac-site-icon {
   fill: currentColor !important;
   margin-block: auto !important;
@@ -358,13 +362,7 @@
   padding-inline: 2px !important;
 }
 
-panel[type="autocomplete-richlistbox"]>.autocomplete-richlistbox {
-  margin-block: -10px !important;
-  margin-inline: -2px !important;
-  padding: var(--fp-contextmenu-padding) !important;
-  border-radius: var(--fp-contextmenu-border-radius) !important;
-  color: inherit !important;
-}
+
 
 #PopupAutoComplete>richlistbox>richlistitem>.two-line-wrapper {
   padding-block: 0 !important;
@@ -407,9 +405,8 @@ panelview .toolbarbutton-1,
     color: var(--arrowpanel-color) !important;
   }
   .popup-internal-box,
-  panel[type="autocomplete-richlistbox"]>.autocomplete-richlistbox,
   .menupopup-arrowscrollbox {
-    background:rgba(43, 42, 51,0.95) !important;
+    background:var(--fp-contextmenu-bgcolor) !important;
     border-width: 0 !important;
      
   }
