@@ -1,4 +1,4 @@
-# Firefox Plus (Test on Windows only)
+# Firefox Plus (Tested on Windows only)
 <img src="screenshots/firefox-26-11-2023.jpg" alt="screenshot" title="Screenshot" width="900">
 <img src="screenshots/firefox-25-11-2023.jpg" alt="screenshot" title="Screenshot" width="900">
 <img src="screenshots/Screenshot 2023-12-04 144143.png" alt="screenshot" title="Screenshot" width="900">
