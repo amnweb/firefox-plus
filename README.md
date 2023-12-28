@@ -12,11 +12,4 @@
 To enable macOS button style, open `user.js` and find `fp.tweak.macos-button` and set it to `true`.  
 To disable bookmarks autohide open `user.js` and find `fp.tweak.autohide-bookmarks` and set it to `false`.
 
-# Notice
-
-~~Please be aware that this mod is designed to work exclusively with the **Dark Mode** setting in **Firefox**. If you are not using Firefox in Dark Mode, the theme may not display as intended and could result in a suboptimal user experience.~~
-
-~~To ensure the best experience, please switch your Firefox browser to Dark Mode before using this mod.~~
-
-
 Enjoy your enhanced browsing experience!
