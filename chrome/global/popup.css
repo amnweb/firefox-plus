@@ -441,22 +441,24 @@ menubar menupopup {
   margin: -1px -4px -16px !important;
 }
 
-menupopup {
+menupopup,panel {
   --fp-margin: 0 !important;
   --fp-outline-color: #0001;
   --fp-box-shadow:
     0 8px 12px #0003,
     0 4px 5px #0002,
     0 2px 4px #0002;
+    --panel-shadow: var(--fp-box-shadow) !important
 }
 
 @media (prefers-color-scheme:dark) {
-  menupopup {
+  menupopup,panel {
     --fp-outline-color: #0002;
     --fp-box-shadow:
       0 8px 12px #0003,
       0 4px 5px #0003,
       0 2px 4px #0002;
+      --panel-shadow: var(--fp-box-shadow) !important
   }
 }
 
