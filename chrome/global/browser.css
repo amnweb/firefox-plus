@@ -1,5 +1,3 @@
-/* Edge-Frfox - browser.css */
-
 @media (-moz-bool-pref: "uc.tweak.floating-tabs") {
   :root {
     --browser-frame-bgcolor: var(--lwt-accent-color);

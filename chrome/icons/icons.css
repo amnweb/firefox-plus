@@ -799,6 +799,11 @@ menuitem[id="placesContext_deleteHost"] {
 #context-pdfjs-copy {
 	--menu-image: url("link.svg");
 }
+#context-openlinkincurrent
+{
+	--menu-image: url("ext-link.svg");
+}
+
 #context-viewsource,
 #context-viewframesource,
 #context-viewpartialsource-selection {
