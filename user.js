@@ -36,3 +36,5 @@ user_pref("browser.search.geoip.url", "");
 user_pref("browser.send_pings.require_same_host", true);
 // Disable telemetry
 user_pref("toolkit.telemetry.enabled", false);
+// Disable (Windows-only) scheduled task which runs in the background to collect and submit data about the browser 
+user_pref("default-browser-agent", false);
