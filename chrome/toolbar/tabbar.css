@@ -139,9 +139,11 @@
 .tabbrowser-tab:is([selected], [multiselected]):-moz-lwtheme {
   z-index: 1;
 }
-.tabbrowser-tab:is([visuallyselected], [multiselected]) {
+
+.tabbrowser-tab:is([visuallyselected], [multiselected]):not([pinned]) {
   min-width:200px !important;
 }
+
 .tab-close-button {
   margin-inline-end: 8px !important;
   width: 17px !important;
@@ -502,7 +504,4 @@ toolbarbutton[part="scrollbutton-down"] {
 
 #tabbrowser-tabs[secondarytext-unsupported] .tab-icon-stack[indicator-replaces-favicon] > :not(.tab-icon-overlay) {
   opacity: 1 !important;
-}
-.tabbrowser-tab:is([visuallyselected], [multiselected]) {
-  min-width:200px !important;
 }
