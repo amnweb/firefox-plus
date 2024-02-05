@@ -1,11 +1,25 @@
- :root {
-    --lwt-selected-tab-background-color: unset !important;
-  }
- 
-.tabbrowser-tab .tab-stack {
-    &::before,
-    &::after {
-      content: initial !important;
+@namespace html "http://www.w3.org/1999/xhtml";
+  @media (prefers-color-scheme: dark) {
+    @media not (prefers-contrast) {
+      html|dialog,
+      .dialogBox {
+        --in-content-page-background: rgba(133, 131, 150, 0.2) !important;
+        backdrop-filter: blur(12px);
+      }
+      :root[dialogroot] {
+        --in-content-page-background: rgba(0,0,0, 0) !important;
+      }
     }
   }
-
+  @media (prefers-color-scheme: light) {
+    @media not (prefers-contrast) {
+      html|dialog,
+      .dialogBox {
+        --in-content-page-background: rgba(255, 255, 255, 0.85) !important;
+        backdrop-filter: blur(12px);
+      }
+      :root[dialogroot] {
+        --in-content-page-background: rgba(255, 255, 255, 0) !important;
+      }
+    }
+  }

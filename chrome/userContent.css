@@ -1,2 +1,5 @@
 @import url("content/common.css");
 @import url("content/newtab.css");
+@import url("content/card-container.css");
+@import url("global/tweaks.css");
+@import url("sidebar/sidebar-tabs.css") (-moz-bool-pref: "fp.tweak.sidebar-enabled");

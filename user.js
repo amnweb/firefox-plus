@@ -8,6 +8,8 @@ user_pref("browser.tabs.tabMinWidth", 66);
 user_pref("browser.tabs.tabClipWidth", 86);
 user_pref("fp.tweak.autohide-bookmarks", true);
 user_pref("fp.tweak.macos-button", false);
+user_pref("fp.tweak.rounded-corners", true);
+user_pref("fp.tweak.sidebar-enabled", false);
 
 // disable spell checking
 user_pref("layout.spellcheckDefault", 0);
@@ -36,5 +38,9 @@ user_pref("browser.search.geoip.url", "");
 user_pref("browser.send_pings.require_same_host", true);
 // Disable telemetry
 user_pref("toolkit.telemetry.enabled", false);
-// Disable (Windows-only) scheduled task which runs in the background to collect and submit data about the browser 
+// Disable (Windows-only) scheduled task which runs in the background to collect and submit data about the browser
 user_pref("default-browser-agent", false);
+// Disable Container Tabs
+//user_pref("privacy.userContext.enabled",false);
+//user_pref("privacy.userContext.ui.enabled",false);
+//user_pref("privacy.userContext.newTabContainerOnLeftClick.enabled", false);

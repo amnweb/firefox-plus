@@ -177,3 +177,9 @@
   }
 }
 
+
+
+#urlbar[focused="true"]:not([suppress-focus-border]) > #urlbar-background, #searchbar:focus-within {
+  outline: 1px solid !important;
+  outline-color:#0078d4 !important;
+}

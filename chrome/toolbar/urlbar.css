@@ -5,6 +5,7 @@
   --urlbar-icon-padding: calc(var(--toolbarbutton-inner-padding) - 2px) !important;
   --fp-urlbar-icon-inline-padding: calc(var(--fp-toolbarbutton-inner-inline-padding) - 2px) !important;
   --identity-box-margin-inline: 2px !important;
+  --link-color: light-dark(#3672e4, #47CBFF) !important;
 }
 :root[style*="--lwt-accent-color: rgb(240, 240, 244)"] #urlbar[focused="true"]:not([suppress-focus-border])>#urlbar-background,
 :root[style*="--lwt-accent-color: rgb(240, 240, 244)"] #searchbar:focus-within {
@@ -22,6 +23,7 @@
 :root:not([lwtheme-brighttext="true"]) #urlbar-background {
   box-shadow: var(--fp-urlbar-shadow, none);
 }
+
 
 #urlbar[open]>#urlbar-background {
   border-color: transparent !important;
@@ -45,7 +47,7 @@
 
 .urlbarView-row:not([type="tip"], [type="dynamic"])[selected]>.urlbarView-row-inner,
 .urlbarView-row-inner[selected] {
-  box-shadow: 3px 0 var(--toolbar-field-focus-border-color) inset !important;
+  box-shadow: 3px 0 #47CBFF inset !important;
 }
 
 #urlbar-anon-search-settings {
@@ -237,4 +239,24 @@
   #identity-box[pageproxystate="valid"].chromeUI>.identity-box-button:not(:hover, [open]),
   #identity-box[pageproxystate="valid"].extensionPage>.identity-box-button:not(:hover, [open]))::after {
   opacity: 0.375;
+}
+
+#urlbar[open] .urlbarView,
+#urlbar[breakout][breakout-extend]>#urlbar-background {
+  animation-name: fp-urlbar-animation !important;
+  animation-duration: 400ms !important;
+  transform-origin: top !important;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1) !important
+}
+
+@keyframes fp-urlbar-animation {
+  from {
+    opacity: 0;
+    transform: scaleY(0)
+  }
+
+  to {
+    opacity: 1;
+    transform: scaleY(1)
+  }
 }

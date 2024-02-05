@@ -1,4 +1,5 @@
 :root {
+  --lwt-selected-tab-background-color: unset !important;
   --tab-block-margin: 8px !important;
    --tab-selected-bgcolor: var(--toolbar-bgcolor) !important;
   & #titlebar {
@@ -11,6 +12,12 @@
     --toolbarbutton-tabsline-border-radius: 8px !important;
     --tabs-navbar-shadow-size: 0 !important;
     --tab-shadow-max-size: 0 !important;
+  }
+}
+.tabbrowser-tab .tab-stack {
+  &::before,
+  &::after {
+    content: initial !important;
   }
 }
 .tabbrowser-tab .tab-close-button {
@@ -504,4 +511,7 @@ toolbarbutton[part="scrollbutton-down"] {
 
 #tabbrowser-tabs[secondarytext-unsupported] .tab-icon-stack[indicator-replaces-favicon] > :not(.tab-icon-overlay) {
   opacity: 1 !important;
+}
+.tabbrowser-tab > .tab-stack > .tab-content[pinned][titlechanged]:not([selected]) {
+  background-position: 4px 4px !important; 
 }

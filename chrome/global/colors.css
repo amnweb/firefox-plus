@@ -19,7 +19,7 @@
   --toolbar-field-border-color: light-dark(#0000, #0000) !important;
   --toolbar-field-focus-background-color: var(--toolbar-field-background-color) !important;
   --toolbar-field-focus-color: var(--toolbar-field-color) !important;
-  --toolbar-field-focus-border-color: light-dark(#0055D7, #63ADE5) !important;
+  --toolbar-field-focus-border-color: light-dark(#0055D7, #0055D7) !important;
   --link-color: light-dark(#0078D4, #75B6E8) !important;
   --urlbar-hover-highlight-color: light-dark(rgb(192 192 192 / .5), rgb(128 128 128 / .5)) !important;
   --urlbar-box-bgcolor: light-dark(rgb(0 0 0 / .09), rgb(255 255 255 / .11)) !important;
@@ -67,10 +67,17 @@
   --tab-icon-overlay-stroke: light-dark(#fff, #4b4b4b) !important;
   --tab-icon-overlay-fill: light-dark(#252525, #fff) !important;
   --toolbarseparator-color: color-mix(in srgb, currentColor 40%, transparent) !important;
+  --in-content-primary-button-text-color: rgb(255, 255, 255) !important;
+  --in-content-primary-button-background: #0055D7 !important;
+  --in-content-primary-button-background-hover: #0960e4 !important;
+  --in-content-primary-button-background-active: #0751be !important;
+
+
 }
 
 /* ensure that dark mode is enabled completely in private browsing mode. */
 @media (-moz-bool-pref: "browser.theme.dark-private-windows") {
+
   :root[privatebrowsingmode="temporary"],
   :root[privatebrowsingmode="temporary"] #nav-bar,
   :root[privatebrowsingmode="temporary"] #PersonalToolbar {
@@ -215,12 +222,13 @@
 }
 
 @-moz-document url(chrome://browser/content/syncedtabs/sidebar.xhtml){
-  body {
-    background: transparent !important;
-  }
+body {
+  background: transparent !important;
+}
 }
 
 @media(-moz-platform: windows) {
+
   .sidebar-panel:not([lwt-sidebar]) #sidebar-search-container>#search-box,
   .sidebar-panel:not([lwt-sidebar]) #viewButton {
     appearance: none !important;

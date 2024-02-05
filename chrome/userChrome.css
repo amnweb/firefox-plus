@@ -6,5 +6,6 @@
 @import url("toolbar/searchbar.css");
 @import url("global/colors.css");
 @import url("global/popup.css");
-@import url("global/tweaks.css");
 @import url("icons/icons.css");
+@import url("global/rounded-corners.css") (-moz-bool-pref: "fp.tweak.rounded-corners");
+@import url("sidebar/sidebar-support.css") (-moz-bool-pref: "fp.tweak.sidebar-enabled");

@@ -80,7 +80,7 @@ url-prefix("about:home") {
 
   .search-wrapper.fake-focus:not(.search.disabled) .search-handoff-button {
     border-color: transparent !important;
-    outline: 2px solid var(--newtab-primary-action-background) !important;
+    outline: 1px solid #0078D4 !important;
     outline-offset: -1px !important;
   }
 
@@ -128,6 +128,11 @@ url-prefix("about:home") {
     display: flex !important;
     padding: 30px !important;
   }
+
+  .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover){
+    background-color: #3c3c47 !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
 
 }
 

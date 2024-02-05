@@ -1,0 +1,85 @@
+:root[tabsintitlebar] #titlebar:-moz-window-inactive {
+  opacity: 1 !important;
+}
+/*Variables for the rounded corners. */
+#main-window:not([chromehidden~="toolbar"]) {
+  --rounded-corners-padding: 4px;
+  --browser-frame-bgcolor: var(--toolbar-bgcolor, var(--lwt-accent-color));
+  --rounded-corners-radius: 8px;
+}
+
+/*Hide border below titlebar on macOS */
+@media (-moz-platform: macos) {
+  :root[chromehidden~="toolbar"][chromehidden~="location"][chromehidden~="directories"] {
+    border-top: none !important;
+  }
+}
+/* Remove separator between toolbars and the browser window */
+#navigator-toolbox {
+  border-bottom: none !important;
+}
+/*Disable rounded corners in fullscreen, only if the toolbar is hidden.*/
+:root[inFullscreen] #navigator-toolbox[style*="margin-top"]+#browser,
+:root[inDOMFullscreen] #browser {
+  --rounded-corners-padding: 0;
+  --rounded-corners-radius: 0;
+
+}
+/* Apply rounded corners to the browser container. */
+#appcontent .browserStack {
+  margin-inline: var(--rounded-corners-padding) !important;
+  margin-block-end: var(--rounded-corners-padding) !important;
+}
+#PersonalToolbar,
+#nav-bar {
+  overflow: initial !important;
+}
+
+#PersonalToolbar:before,
+#PersonalToolbar:after,
+#nav-bar:before,
+#nav-bar:after,
+#appcontent .browserStack:before,
+#appcontent .browserStack:after {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  width: 16px !important;
+  height: 16px !important;
+  bottom: -16px !important;
+  pointer-events: none !important;
+  clip-path: inset(0);
+  border-bottom-right-radius: var(--rounded-corners-radius) !important;
+  left: var(--rounded-corners-padding) !important;
+  transform: rotate(180deg) !important;
+  box-shadow: 0 0 0 18px var(--toolbar-bgcolor) !important;
+  z-index: 1;
+}
+
+#PersonalToolbar:after,
+#nav-bar:after {
+  right: var(--rounded-corners-padding) !important;
+  left: auto !important;
+  transform: rotate(270deg) !important;
+}
+
+#appcontent .browserStack:before,
+#appcontent .browserStack:after {
+  bottom: 0 !important;
+  left: 0 !important;
+  transform: rotate(90deg) !important;
+}
+
+#appcontent .browserStack:after {
+  right: 0 !important;
+  left: auto !important;
+  transform: rotate(0deg) !important;
+}
+
+/* Apply colour to the frame around the browser window. */
+#browser {
+  background-color: var(--browser-frame-bgcolor) !important;
+}
+#tabbrowser-tabpanels {
+  background-color: transparent !important;
+}
