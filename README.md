@@ -9,9 +9,8 @@
 
 # Sidebar Support
 <img src="screenshots/sidebar-demo.png" alt="screenshot" title="Screenshot" width="900">
-<video controls poster="screenshots/sidebar-demo-video.00_00_17_07.Still001.png" width="900" height="506" loop muted>
-	<source src="screenshots/sidebar-demo-video.mp4" type="video/mp4">
-</video>
+<img src="screenshots/sidebar-demo-video.gif" alt="screenshot" title="Screenshot" width="900">
+ 
 
 # How to install
 1. Go to `about:support` and click the "Open Folder/Show in Finder" button for the root directory of your browser profile/s.
