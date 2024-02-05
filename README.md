@@ -24,7 +24,7 @@
 - To enable support for sidebar open `user.js` and find `fp.tweak.sidebar-enabled` and set it to `true` or `false`.  
 
 > [!NOTE]
-> <sub>To get sidebar support you will need to install extension [Sidebar Tabs](https://github.com/asamuzaK/sidebarTabs)</sub>
+> To get sidebar support you will need to install extension [Sidebar Tabs](https://github.com/asamuzaK/sidebarTabs)
 
 
 Enjoy your enhanced browsing experience!
