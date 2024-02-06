@@ -440,10 +440,6 @@ toolbarbutton[part="scrollbutton-down"] {
   --tab-label-mask-size: 1em !important;
 }
 
-#tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([pinned]) .tab-content {
-  padding-inline: calc(var(--inline-tab-padding) - 4px) 0 !important;
-}
-
 .tab-content {
   padding-inline: var(--inline-tab-padding) 0 !important;
 }
