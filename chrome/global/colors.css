@@ -71,13 +71,10 @@
   --in-content-primary-button-background: #0055D7 !important;
   --in-content-primary-button-background-hover: #0960e4 !important;
   --in-content-primary-button-background-active: #0751be !important;
-
-
 }
 
 /* ensure that dark mode is enabled completely in private browsing mode. */
 @media (-moz-bool-pref: "browser.theme.dark-private-windows") {
-
   :root[privatebrowsingmode="temporary"],
   :root[privatebrowsingmode="temporary"] #nav-bar,
   :root[privatebrowsingmode="temporary"] #PersonalToolbar {
