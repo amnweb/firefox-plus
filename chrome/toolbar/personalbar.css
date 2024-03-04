@@ -1,5 +1,6 @@
 #PersonalToolbar {
   --bookmark-block-padding: 6px !important;
+  position: relative;
  }
  
  /* Bookmarks bar item sizing */
