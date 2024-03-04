@@ -1,21 +1,21 @@
 @media (prefers-color-scheme: dark) {
-  .card-container{
-    --fxview-primary-action-background:#47CBFF;
-    background-color: #33333e !important;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-  }
+    details.card-container {
+        --fxview-primary-action-background: #47CBFF;
+        background-color: #33333e !important;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    }
 }
 @media (prefers-color-scheme: light) {
-  .card-container{
-    --fxview-primary-action-background:#3672e4;
-    background-color: #ebebee !important;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-  }
+    details.card-container {
+        --fxview-primary-action-background: #3672e4;
+        background-color: #ebebee !important;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    }
 }
 .fxview-tab-row-url {
-  text-decoration: none !important;
-  color:var(--fxview-primary-action-background) !important
+    text-decoration: none !important;
+    color: var(--fxview-primary-action-background) !important
 }
 .sticky-container.bottom-fade {
-  background:linear-gradient( to bottom, var(--fxview-background-color) 0%, var(--fxview-background-color) 40%, transparent 100% )!important
+    background: linear-gradient(to bottom, var(--fxview-background-color) 0%, var(--fxview-background-color) 40%, transparent 100%) !important
 }
