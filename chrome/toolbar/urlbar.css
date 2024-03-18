@@ -100,7 +100,13 @@
   padding-inline: var(--fp-urlbar-icon-inline-padding) !important;
   width: calc(var(--fp-urlbar-icon-inline-padding) * 2 + 16px) !important;
 }
-
+.urlbar-page-action#translations-button[translationsactive="true"] {
+    width: auto !important;
+  }
+  #translations-button-locale {
+    border-radius: 12px !important;
+    margin-inline: 4px -2px !important;
+  }
 #identity-box[pageproxystate="valid"].notSecureText>.identity-box-button,
 #identity-box[pageproxystate="valid"].chromeUI>.identity-box-button,
 #identity-box[pageproxystate="valid"].extensionPage>.identity-box-button,
