@@ -124,7 +124,7 @@ toolbarbutton.bookmark-item[open="true"] > .toolbarbutton-icon{
 }
 #navigator-toolbox:hover > #PersonalToolbar
 {
-  transition-delay: 100ms !important;
+  transition-delay: 800ms !important;
   transform: rotateX(var(--autohide-toolbar-hover-rotation,0));
 }
 
