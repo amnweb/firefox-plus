@@ -198,7 +198,7 @@ url("about:newtab") {
         padding: 20px 20px 4px !important;
     }
     /* Firefox 124.0+ fix for homepage top-sites-list */
-    .top-site-outer .top-site-inner > a {
+    #root .top-site-outer .top-site-inner > a {
         padding: 0 !important;
     }
     #root .top-site-outer .tile .icon-wrapper,
