@@ -42,11 +42,7 @@ user_pref("toolkit.telemetry.enabled", false);
 user_pref("default-browser-agent", false);
 // Better font rendering
 //user_pref("gfx.webrender.quality.force-subpixel-aa-where-possible",true);
-//user_pref("gfx.font_rendering.cleartype_params.force_gdi_classic_for_families", "");
-//user_pref("gfx.font_rendering.cleartype_params.force_gdi_classic_max_size", 6);
-//user_pref("gfx.font_rendering.directwrite.use_gdi_table_loading", false);
-//user_pref("gfx.font_rendering.cleartype_params.rendering_mode", 4);
-//user_pref("gfx.font_rendering.cleartype_params.enhanced_contrast", 50);
+//user_pref("gfx.font_rendering.cleartype_params.rendering_mode", 5);
 // Disable Container Tabs
 //user_pref("privacy.userContext.enabled",false);
 //user_pref("privacy.userContext.ui.enabled",false);
