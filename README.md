@@ -24,7 +24,7 @@
 - To enable support for sidebar, open `user.js`, find `fp.tweak.sidebar-enabled` and set it to `true` or `false`.
 - To enable or disable White Mode, open `user.js`, find `browser.in-content.dark-mode` and set it to `true` or `false`. Then find and set `ui.systemUsesDarkTheme` to `1` or `0`.
 > [!NOTE]
-> To get the sidebar support you will need to install an extension called [Sidebar Tabs](https://github.com/asamuzaK/sidebarTabs)
+> To get the sidebar support you will need to install the [Sidebar Tabs](https://github.com/asamuzaK/sidebarTabs) extension.
 
 
 ***Enjoy your enhanced browsing experience!***
