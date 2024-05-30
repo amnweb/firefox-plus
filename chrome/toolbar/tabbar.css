@@ -93,11 +93,9 @@
 }
 
 .tabbrowser-tab:hover .tab-background:not([selected], [multiselected]) {
-  background-color: color-mix(in srgb, currentColor 8%, transparent) !important;
-  --fp-tab-corner-bg: color-mix(in srgb, currentColor 8%, transparent) !important;
+  background-color: color-mix(in srgb, currentColor 5%, transparent) !important;
+  --fp-tab-corner-bg: color-mix(in srgb, currentColor 5%, transparent) !important;
 }
-
-
 
 .tab-background:is([selected], [multiselected]) {
   outline: none !important;
@@ -149,6 +147,7 @@
 
 .tabbrowser-tab:is([visuallyselected], [multiselected]):not([pinned]) {
   min-width:200px !important;
+  z-index: 1;
 }
 
 .tab-close-button {
