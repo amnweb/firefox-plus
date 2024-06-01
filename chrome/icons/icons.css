@@ -123,6 +123,7 @@ and 11 so applied to both) */
 }
 
 .tab-close-button {
+	display: inline-flex !important;
 	list-style-image: url("close-9px.svg") !important;
 }
 
