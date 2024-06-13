@@ -69,6 +69,9 @@
         background-color: transparent !important;
     }
 
+    .customize-menu .close-button-wrapper {
+        background-color: transparent !important;
+    }
     @media (prefers-color-scheme: dark) {
 
         button:not(.ghost-button):not(.enable-custom-image-input):not(.external-link):not(.context-menu-button.icon):not(.toggle-button):not(.category):not([role="menuitem"]):not(button[class*='devtools']):not(button[id*='toolbox']),

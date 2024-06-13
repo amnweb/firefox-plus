@@ -122,7 +122,7 @@ and 11 so applied to both) */
 	list-style-image: url("close.svg") !important;
 }
 
-.tab-close-button {
+.tab-close-button:not([pinned]) {
 	display: inline-flex !important;
 	list-style-image: url("close-9px.svg") !important;
 }
@@ -1008,7 +1008,7 @@ menuitem[id="placesContext_new:separator"] {
 	--menu-image: url("container-tab.svg");
 }
 
-#context_closeTab {
+#context_closeTab,#context_closeDuplicateTabs {
 	--menu-image: url("close.svg");
 }
 #context_closeTabOptions {
