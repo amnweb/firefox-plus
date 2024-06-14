@@ -34,10 +34,7 @@ Install or update Firefox Plus directly from PowerShell.
 
 ```iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/amnweb/firefox-plus/main/install.ps1'))```
 
-<video width="100%" controls>
-  <source src="screenshots/iex.mp4" type="video/mp4">
-</video>
-
+<img src="screenshots/iex.gif" alt="Preview" title="Preview" width="1244">
 
 ***Enjoy your enhanced browsing experience!***
 
