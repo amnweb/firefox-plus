@@ -26,6 +26,18 @@
 > [!NOTE]
 > To get the sidebar support you will need to install the [Sidebar Tabs](https://github.com/asamuzaK/sidebarTabs) extension.
 
+# Experimental
+Install or update Firefox Plus directly from PowerShell.
+
+1. Open PowerShell.
+2. Copy and paste this command
+
+```iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/amnweb/firefox-plus/main/install.ps1'))```
+
+<video width="100%" controls>
+  <source src="screenshots/iex.mp4" type="video/mp4">
+</video>
+
 
 ***Enjoy your enhanced browsing experience!***
 
