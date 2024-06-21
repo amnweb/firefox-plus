@@ -136,7 +136,7 @@ url-prefix("about:home") {
 
 }
 
-/* private browsing newtab */
+/* Private browsing new tab */
 @-moz-document url-prefix(about:privatebrowsing) {
   :root {
     --fp-wordmark-color: light-dark(#737373, #fff);

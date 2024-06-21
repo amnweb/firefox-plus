@@ -1,31 +1,22 @@
 :root[tabsintitlebar] #titlebar:-moz-window-inactive {
   opacity: 1 !important;
 }
-/*Variables for the rounded corners. */
 #main-window:not([chromehidden~="toolbar"]) {
   --rounded-corners-padding: 4px;
   --browser-frame-bgcolor: var(--toolbar-bgcolor, var(--lwt-accent-color));
   --rounded-corners-radius: 8px;
 }
 
-/*Hide border below titlebar on macOS */
-@media (-moz-platform: macos) {
-  :root[chromehidden~="toolbar"][chromehidden~="location"][chromehidden~="directories"] {
-    border-top: none !important;
-  }
-}
-/* Remove separator between toolbars and the browser window */
 #navigator-toolbox {
   border-bottom: none !important;
 }
-/*Disable rounded corners in fullscreen, only if the toolbar is hidden.*/
+/*Disable rounded corners in fullscreen if the toolbar is hidden.*/
 :root[inFullscreen] #navigator-toolbox[style*="margin-top"]+#browser,
 :root[inDOMFullscreen] #browser {
   --rounded-corners-padding: 0;
   --rounded-corners-radius: 0;
 
 }
-/* Apply rounded corners to the browser container. */
 #appcontent .browserStack {
   margin-inline: var(--rounded-corners-padding) !important;
   margin-block-end: var(--rounded-corners-padding) !important;
@@ -76,7 +67,6 @@
   transform: rotate(0deg) !important;
 }
 
-/* Apply colour to the frame around the browser window. */
 #browser {
   background-color: var(--browser-frame-bgcolor) !important;
 }

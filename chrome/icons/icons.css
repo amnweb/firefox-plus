@@ -1,92 +1,83 @@
-/* windows 11 style window controls (no known way to detect between windows 10
-and 11 so applied to both) */
-@media (-moz-platform: windows), (-moz-gtk-csd-available) {
-	.titlebar-min {
-		list-style-image: url("win11-minimize.svg") !important;
-	}
+.titlebar-min {
+	list-style-image: url("win11-minimize.svg") !important;
+}
 
+.titlebar-max {
+	list-style-image: url("win11-maximize.svg") !important;
+}
+
+.titlebar-restore {
+	list-style-image: url("win11-restore.svg") !important;
+}
+
+.titlebar-close {
+	list-style-image: url("win11-close.svg") !important;
+}
+
+@media (max-resolution: 1dppx) {
+	toolbar[brighttext] .titlebar-close,
+	.titlebar-close:hover {
+		list-style-image: url("win11-close-dark.svg") !important;
+	}
+}
+
+@media (-moz-bool-pref: "fp.tweak.macos-button") {
+	.titlebar-min {
+		list-style-image: url("mac-minimize.svg") !important;
+	}
+	.titlebar-close {
+		margin-right: 4px !important;
+	}
 	.titlebar-max {
-		list-style-image: url("win11-maximize.svg") !important;
+		list-style-image: url("mac-maximize.svg") !important;
 	}
 
 	.titlebar-restore {
-		list-style-image: url("win11-restore.svg") !important;
+		list-style-image: url("mac-restore.svg") !important;
 	}
 
 	.titlebar-close {
-		list-style-image: url("win11-close.svg") !important;
+		list-style-image: url("mac-close.svg") !important;
 	}
-
-	/* darkmode icon that uses thicker strokes and is easier to see (only needed
-  at 1x scale) */
 	@media (max-resolution: 1dppx) {
 		toolbar[brighttext] .titlebar-close,
 		.titlebar-close:hover {
-			list-style-image: url("win11-close-dark.svg") !important;
-		}
-	}
-
-
-	@media (-moz-bool-pref: "fp.tweak.macos-button") {
-		.titlebar-min {
-			list-style-image: url("mac-minimize.svg") !important;
-		}
-		.titlebar-close {
-			margin-right:4px !important;
-		  }
-		.titlebar-max {
-			list-style-image: url("mac-maximize.svg") !important;
-		}
-	
-		.titlebar-restore {
-			list-style-image: url("mac-restore.svg") !important;
-		}
-	
-		.titlebar-close {
 			list-style-image: url("mac-close.svg") !important;
 		}
-		@media (max-resolution: 1dppx) {
-			toolbar[brighttext] .titlebar-close,
-			.titlebar-close:hover {
-				list-style-image: url("mac-close.svg") !important;
-			}
-		}
-
-		.titlebar-button {
-			& > .toolbarbutton-icon {
-			  width: 24px !important;
-			  height: 24px !important;
-			}
-		  }
-		  .titlebar-button {
-			padding: 0 0px !important;
-			filter: grayscale(1) brightness(6);
-			opacity: 0.25 !important;
-		  }
-		  
-		  #titlebar:hover .titlebar-button {
-			filter: grayscale(0) brightness(1);
-			opacity: 0.8 !important;
-		  }
-	
-		  :-moz-window-inactive .titlebar-button {
-			opacity: 0.5 !important;
-				}
-			   
-		  .titlebar-button:hover,.titlebar-button:not(.titlebar-close):hover {
-			background-color: transparent !important;
-		  }
-
-		  toolbar[brighttext] .titlebar-close:hover:active {
-			background-color: transparent !important;
-		  }
-		  #titlebar .titlebar-button:hover {
-			opacity: 1 !important;
-		  }
 	}
 
+	.titlebar-button {
+		& > .toolbarbutton-icon {
+			width: 24px !important;
+			height: 24px !important;
+		}
+	}
+	.titlebar-button {
+		padding: 0 0px !important;
+		filter: grayscale(1) brightness(6);
+		opacity: 0.25 !important;
+	}
 
+	#titlebar:hover .titlebar-button {
+		filter: grayscale(0) brightness(1);
+		opacity: 0.8 !important;
+	}
 
+	:-moz-window-inactive .titlebar-button {
+		opacity: 0.5 !important;
+	}
+
+	.titlebar-button:hover,
+	.titlebar-button:not(.titlebar-close):hover {
+		background-color: transparent !important;
+	}
+
+	toolbar[brighttext] .titlebar-close:hover:active {
+		background-color: transparent !important;
+	}
+	#titlebar .titlebar-button:hover {
+		opacity: 1 !important;
+	}
 }
 
 .subviewbutton {
@@ -102,8 +93,6 @@ and 11 so applied to both) */
 	list-style-image: url("account-private.svg") !important;
 	border-radius: 100% !important;
 }
-
- 
 
 #back-button {
 	list-style-image: url("back.svg") !important;
@@ -673,9 +662,10 @@ menupopup > menuitem:is([checked="true"], [selected="true"]) .menu-iconic-icon {
 		.in-menulist,
 		.in-menulist menu,
 		.unified-nav-current
-	),#toggle_toolbar-menubar,
-	#PanelUI-history toolbarbutton,
-	#unified-extensions-context-menu menuitem{
+	),
+#toggle_toolbar-menubar,
+#PanelUI-history toolbarbutton,
+#unified-extensions-context-menu menuitem {
 	background-image: var(--menu-image) !important;
 	background-size: 16px !important;
 	background-position: var(--fp-contextmenu-menuitem-padding-inline) center !important;
@@ -684,9 +674,11 @@ menupopup > menuitem:is([checked="true"], [selected="true"]) .menu-iconic-icon {
 	fill: currentColor !important;
 }
 
-menu>.menu-iconic-text,
-menuitem>.menu-iconic-text {
-  padding-inline-start: var(--fp-contextmenu-menuicon-margin-inline) !important;
+menu > .menu-iconic-text,
+menuitem > .menu-iconic-text {
+	padding-inline-start: var(
+		--fp-contextmenu-menuicon-margin-inline
+	) !important;
 }
 #context-savepage {
 	--menu-image: url("save.svg");
@@ -705,7 +697,7 @@ menuitem>.menu-iconic-text {
 #toolbar-context-undoCloseTab {
 	--menu-image: url("edit-undo.svg");
 }
-#toggle_toolbar-menubar{
+#toggle_toolbar-menubar {
 	--menu-image: url("menu-bar.svg");
 }
 
@@ -807,8 +799,7 @@ menuitem[id="placesContext_deleteHost"] {
 #context-pdfjs-copy {
 	--menu-image: url("link.svg");
 }
-#context-openlinkincurrent
-{
+#context-openlinkincurrent {
 	--menu-image: url("ext-link.svg");
 }
 
@@ -968,11 +959,11 @@ menuitem[id="placesContext_showAllBookmarks"],
 #BMB_searchBookmarks {
 	--menu-image: url("search-page.svg");
 }
-#appMenuRecentlyClosedTabs  {
+#appMenuRecentlyClosedTabs {
 	--menu-image: url("container-tab.svg");
 }
 #appMenuClearRecentHistory {
-	--menu-image: url("edit-delete.svg")
+	--menu-image: url("edit-delete.svg");
 }
 #appMenuRecentlyClosedWindows {
 	--menu-image: url("window.svg");
@@ -983,7 +974,6 @@ menuitem[id="placesContext_showAllBookmarks"],
 #PanelUI-historyMore {
 	--menu-image: url("manage.svg");
 }
- 
 
 menuitem[id="placesContext_new:bookmark"],
 menuitem[id="placesContext_new:folder"],
@@ -1008,7 +998,8 @@ menuitem[id="placesContext_new:separator"] {
 	--menu-image: url("container-tab.svg");
 }
 
-#context_closeTab,#context_closeDuplicateTabs {
+#context_closeTab,
+#context_closeDuplicateTabs {
 	--menu-image: url("close.svg");
 }
 #context_closeTabOptions {
@@ -1019,17 +1010,14 @@ menuitem[id="placesContext_new:separator"] {
 	--menu-image: url("report.svg");
 }
 
-/* FIX header icons for the app menu sub menus (eg. fx account, history...) */
 .panel-header > h1 {
 	text-align: left;
 	margin-left: 8px !important;
 }
 .wordmark::after {
 	content: "Plus" !important;
-  
-  }
+}
 
-/* header icons for the app menu sub menus (eg. fx account, history...) */
 .panel-header > h1 > span::before {
 	content: "";
 	background: var(--header-image, none) center / 16px no-repeat;
@@ -1081,17 +1069,37 @@ menuitem[id="placesContext_new:separator"] {
 .unified-extensions-context-menu-move-widget-up {
 	--menu-image: url("arrow-up.svg");
 }
-.unified-extensions-item .webextension-browser-action.subviewbutton > .toolbarbutton-badge-stack > .toolbarbutton-icon
-{
-  height: 24px !important;
-  width: 24px !important;
+.unified-extensions-item
+	.webextension-browser-action.subviewbutton
+	> .toolbarbutton-badge-stack
+	> .toolbarbutton-icon {
+	height: 24px !important;
+	width: 24px !important;
 }
 
-:not(:not(menubar)>menu, #ContentSelectDropdown)>menupopup>menuitem:not(.menuitem-iconic, [type="checkbox"], [type="radio"], .in-menulist, .in-menulist menuitem, .unified-nav-current),
-  :not(:not(menubar)>menu, #ContentSelectDropdown)>menupopup>menu:not(.menu-iconic, [type="checkbox"], [type="radio"], .in-menulist, .in-menulist menu, .unified-nav-current),
-  :not(:not(menubar)>menu, #ContentSelectDropdown)>menupopup>menucaption 
-   {
-    padding-inline-start: calc(var(--fp-contextmenu-menuitem-padding-inline) + 16px + var(--fp-contextmenu-menuicon-margin-inline)) !important;
-  }
-
- 
+:not(:not(menubar) > menu, #ContentSelectDropdown)
+	> menupopup
+	> menuitem:not(
+		.menuitem-iconic,
+		[type="checkbox"],
+		[type="radio"],
+		.in-menulist,
+		.in-menulist menuitem,
+		.unified-nav-current
+	),
+:not(:not(menubar) > menu, #ContentSelectDropdown)
+	> menupopup
+	> menu:not(
+		.menu-iconic,
+		[type="checkbox"],
+		[type="radio"],
+		.in-menulist,
+		.in-menulist menu,
+		.unified-nav-current
+	),
+:not(:not(menubar) > menu, #ContentSelectDropdown) > menupopup > menucaption {
+	padding-inline-start: calc(
+		var(--fp-contextmenu-menuitem-padding-inline) + 16px +
+			var(--fp-contextmenu-menuicon-margin-inline)
+	) !important;
+}

@@ -8,6 +8,7 @@
 
 @-moz-document url-prefix(about:) {
     :root {
+        
         --newtab-primary-element-text-color: rgba(251, 251, 254, 1) !important;
         --in-content-page-color: light-dark(var(--newtab-background-color), #fff) !important;
         --in-content-page-background: light-dark(#f7f7f7, var(--newtab-background-color)) !important;
@@ -38,9 +39,6 @@
         --in-content-button-background-hover: light-dark(#e5e5e5, #545454) !important;
         --in-content-button-background-active: light-dark(#d5d5d5, #606060) !important;
         --in-content-primary-button-text-color: light-dark(#fff, #fff) !important;
-        --in-content-primary-button-background: light-dark(#0061e0, #006CBE) !important;
-        --in-content-primary-button-background-hover: light-dark(#0250bb, #0078D4) !important;
-        --in-content-primary-button-background-active: light-dark(#053e94, #005CA3) !important;
         --in-content-danger-button-background: light-dark(#DF4951, #E12424) !important;
         --in-content-danger-button-background-hover: light-dark(#EA656C, #F94343) !important;
         --in-content-danger-button-background-active: light-dark(#BB353C, #AA1E1E) !important;
@@ -50,11 +48,6 @@
         --in-content-table-background: light-dark(#f7f7f7, var(--newtab-background-color)) !important;
         --in-content-text-color: var(--in-content-page-color) !important;
         scrollbar-color: light-dark(rgb(37 37 37 / .4), rgb(255 255 255 / .4)) light-dark(#f7f7f7, var(--newtab-background-color)) !important;
-
-        --in-content-primary-button-text-color: rgb(255, 255, 255) !important;
-        --in-content-primary-button-background: #0055D7 !important;
-        --in-content-primary-button-background-hover: #0960e4 !important;
-        --in-content-primary-button-background-active: #0751be !important;
     }
 
     #translations-manage-install-list,

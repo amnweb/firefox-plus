@@ -12,12 +12,11 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   padding-inline: 6px !important;
   font-size: 12px !important;
 
-  /* Adjust vertical label position on Windows */
-  @media (-moz-platform: windows) {
+ 
     & .toolbarbutton-text {
       margin-block: -1px 0 !important;
     }
-  }
+ 
 }
 
 #PersonalToolbar .toolbarbutton-1 {
@@ -72,20 +71,18 @@ toolbarbutton.bookmark-item[open="true"] > .toolbarbutton-icon{
   --bookmarks-toolbar-overlapping-browser-height: 34px !important;
 }
 
-
-
 /* Autohide bookmark toolbar */
 @media (-moz-bool-pref: "fp.tweak.autohide-bookmarks") {
 #PersonalToolbar{
-  --bm-padding: 4px; /* Vertical padding to be applied to bookmarks */
-  --autohide-toolbar-delay: 600ms; /* The toolbar is hidden after 0.6s */
-  --autohide-toolbar-focus-rotation: 0deg; /* urlbar is focused */
-  --autohide-toolbar-hover-rotation: 0deg; /* cursor is over the toolbar area */
+  --bookmarks-padding: 4px;
+  --autohide-toolbar-delay: 600ms;
+  --autohide-toolbar-focus-rotation: 0deg;
+  --autohide-toolbar-hover-rotation: 0deg;
 }
 :root {
   --firefoxcss-bookmarks-bg-color: transparent !important;
 }
-:root[uidensity="touch"] #PersonalToolbar{ --bm-padding: 7px }
+:root[uidensity="touch"] #PersonalToolbar{ --bookmarks-padding: 7px }
 #PersonalToolbar:not([customizing]){
   position: relative;
   margin-bottom: -34px;
@@ -112,7 +109,7 @@ toolbarbutton.bookmark-item[open="true"] > .toolbarbutton-icon{
 #PlacesToolbarItems > .bookmark-item,
 #OtherBookmarks,
 #PersonalToolbar > #import-button{
-  padding-block: var(--bm-padding) !important;
+  padding-block: var(--bookmarks-padding) !important;
 }
 
 #nav-bar:focus-within + #PersonalToolbar{

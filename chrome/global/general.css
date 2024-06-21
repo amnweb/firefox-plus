@@ -1,4 +1,178 @@
 :root {
+    --button-primary-bgcolor:#0055D7!important;
+    --button-primary-hover-bgcolor:#0960e4 !important;
+    --button-primary-active-bgcolor:#0751be !important;
+    --in-content-primary-button-text-color: rgb(255, 255, 255) !important;
+    --in-content-primary-button-background: #0055D7 !important;
+    --in-content-primary-button-background-hover: #0960e4 !important;
+    --in-content-primary-button-background-active: #0751be !important;
+}
+/* Change Colour of page when loading */
+:root:not(:-moz-lwtheme) #tabbrowser-tabpanels {
+	background-color: light-dark(#f7f7f7, #252525) !important;
+}
+
+/* dark mode enabled in private browsing. */
+@media (-moz-bool-pref: "browser.theme.dark-private-windows") {
+	:root[privatebrowsingmode="temporary"],
+	:root[privatebrowsingmode="temporary"] #nav-bar,
+	:root[privatebrowsingmode="temporary"] #PersonalToolbar {
+		color-scheme: dark !important;
+	}
+}
+
+#urlbar {
+	--urlbar-box-bgcolor: inherit !important;
+	--urlbar-box-hover-bgcolor: inherit !important;
+	--urlbar-box-focus-bgcolor: inherit !important;
+}
+
+:root:not(:-moz-lwtheme)[tabsintitlebar] .titlebar-buttonbox {
+	color: light-dark(#000, #fff) !important;
+}
+
+#statuspanel-label {
+	background-color: var(--toolbar-field-focus-background-color) !important;
+	color: var(--toolbar-field-focus-color) !important;
+	border-color: transparent !important;
+	box-shadow: 0 2px 5px #0004, 0 0 0 1px light-dark(#0002, #0004) !important;
+}
+
+tooltip {
+	background-color: var(--arrowpanel-background) !important;
+	color: var(--arrowpanel-color) !important;
+	border-color: var(--arrowpanel-border-color) !important;
+}
+
+.titlebar-button:not(.titlebar-close):hover {
+	background-color: color-mix(
+		in srgb,
+		currentColor 11%,
+		transparent
+	) !important;
+}
+
+.titlebar-button:hover:active {
+	background-color: color-mix(
+		in srgb,
+		currentColor 20%,
+		transparent
+	) !important;
+}
+
+.titlebar-close:hover {
+	stroke: white !important;
+	background-color: #e81123 !important;
+}
+
+.titlebar-close:hover:active {
+	background-color: #ef6b76 !important;
+}
+
+toolbar[brighttext] .titlebar-close:hover:active {
+	background-color: #9c1420 !important;
+}
+
+window#places {
+	--organizer-color: #000 !important;
+	--organizer-deemphasized-color: #666 !important;
+	--organizer-toolbar-background: #f7f7f7 !important;
+	--organizer-pane-background: #f7f7f7 !important;
+	--organizer-content-background: #f7f7f7 !important;
+	--organizer-hover-background: #00000025 !important;
+	--organizer-selected-background: #006cbe80 !important;
+	--organizer-outline-color: #0055d7a0 !important;
+	--organizer-toolbar-field-background: #fff !important;
+	--organizer-toolbar-field-background-focused: #fff !important;
+	--organizer-border-color: #bfbfbf !important;
+	scrollbar-color: #0006 #f7f7f740 !important;
+}
+
+#placesViewsBox #downloadsListBox richlistitem[selected="true"] {
+	background-color: #006cbe !important;
+	color: #fff !important;
+}
+
+#placeContentColumns :is(treecol, treecolpicker) {
+	background-color: #f7f7f7 !important;
+	color: #000 !important;
+	border-inline-start: 1px solid #bfbfbf !important;
+	box-shadow: inset 0 -1px #bfbfbf !important;
+	appearance: none !important;
+}
+
+#placeContentColumns :is(treecol, treecolpicker):where(:hover) {
+	background-color: #cecece !important;
+	color: #000 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+	window#places {
+		--organizer-color: #fff !important;
+		--organizer-deemphasized-color: #bbb !important;
+		--organizer-toolbar-background: #3b3b3b !important;
+		--organizer-pane-background: #2b2b2b !important;
+		--organizer-content-background: #1c1c1c !important;
+		--organizer-hover-background: #ffffff25 !important;
+		--organizer-selected-background: #006cbe80 !important;
+		--organizer-outline-color: #63ade5 !important;
+		--organizer-toolbar-field-background: #2b2b2b !important;
+		--organizer-toolbar-field-background-focused: #2b2b2b !important;
+		--organizer-border-color: #686868 !important;
+		scrollbar-color: #fff6 #2b2b2b40 !important;
+	}
+
+	#placesViewsBox #downloadsListBox richlistitem[selected="true"] {
+		background-color: #006cbe !important;
+		color: #fff !important;
+	}
+
+	#placeContentColumns :is(treecol, treecolpicker) {
+		background-color: #3b3b3b !important;
+		color: #fff !important;
+		border-inline-start: 1px solid #686868 !important;
+		box-shadow: inset 0 -1px #686868 !important;
+	}
+
+	#placeContentColumns :is(treecol, treecolpicker):where(:hover) {
+		background-color: #4a4a4a !important;
+		color: #fff !important;
+	}
+}
+
+/* side bar theme */
+#sidebar-box:not([lwt-sidebar]) {
+	--sidebar-background-color: light-dark(#f7f7f7, #3b3b3b) !important;
+	--sidebar-text-color: light-dark(#000, #fff) !important;
+	appearance: none !important;
+}
+
+#browser:not([style*="--sidebar-border-color"]) {
+	--sidebar-border-color: light-dark(#bfbfbf, #686868) !important;
+}
+
+.sidebar-panel:not([lwt-sidebar]) {
+	color: light-dark(#000, #fff) !important;
+	scrollbar-color: light-dark(#0006, #fff6) light-dark(#f7f7f740, #3b3b3b40) !important;
+}
+
+@-moz-document url(chrome://browser/content/syncedtabs/sidebar.xhtml)
+{
+	body {
+		background: transparent !important;
+	}
+}
+
+.sidebar-panel:not([lwt-sidebar]) #sidebar-search-container > #search-box,
+.sidebar-panel:not([lwt-sidebar]) #viewButton {
+	appearance: none !important;
+	background-color: light-dark(#fff, #2b2b2b) !important;
+	color: inherit !important;
+	border: 1px solid light-dark(#bfbfbf, #686868) !important;
+	border-radius: 2px !important;
+}
+
+:root {
   --panel-subview-body-padding: 2px 0 !important;
   --arrowpanel-border-radius: 8px !important;
   --arrowpanel-menuitem-border-radius: 4px !important;
@@ -10,7 +184,6 @@
   --fp-arrowpanel-menuitem-margin-block: 2px;
   --panel-separator-margin-vertical: 2px !important;
   --panel-separator-margin-horizontal: 0 !important;
-
 
   --fp-panel-zoom-button-padding: 8px;
   --fp-panel-zoom-button-inline-padding: 9px;
@@ -43,7 +216,7 @@
   --in-content-page-background: var(--fp-contextmenu-bgcolor) !important;
 }
 
-/* app menu */
+/* App Menu */
 .addon-banner-item,
 .panel-banner-item {
   margin: 2px 4px 2px !important;
@@ -115,7 +288,6 @@
   padding: var(--fp-panel-zoom-button-padding) calc(var(--fp-panel-zoom-button-padding) / 2) !important;
 }
 
-/* #appMenu-zoomReduce-button2, */
 #appMenu-zoom-controls>#appMenu-fullscreen-button2 {
   margin-left: calc((var(--panel-separator-margin-vertical) + var(--fp-arrowpanel-menuitem-margin-block)) * 2 + 1px) !important;
 }
@@ -386,9 +558,7 @@ menuitem[checked="true"]>.menu-iconic-left,
 .menuitem-iconic>.menu-iconic-left {
   margin: 0 !important;
 }
-
-
-
+ 
 /* Context Menu */
 menupopup:not(.PanelUI-subView),
 menupopup:not(.PanelUI-subView) menuitem,
@@ -432,8 +602,7 @@ menupopup:not(.PanelUI-subView) {
 .panel-arrowbox {
   display: none !important;
 }
-
-/* cut off shadow so it doesn't get in the way of the menubar items */
+ 
 menubar menupopup {
   padding: 1px 8px 20px !important;
   margin: -1px -4px -16px !important;
@@ -463,9 +632,7 @@ panel {
   }
 }
 
-
-
-/* use default shadow for subview menupopup (eg. bookmarks) */
+ 
 menupopup.PanelUI-subView {
   --fp-box-shadow: 0 0 0 1px var(--panel-border-color);
   --fp-margin: 1px !important;
@@ -668,3 +835,10 @@ menuitem[checked="true"]>.menu-iconic-left,
     margin-left: -20px !important;
   }
 }
+.findbar-textbox:focus {
+    outline: 2px solid rgba(0, 102, 255, 0.9) !important;
+  }
+  
+.findbar-textbox[status="notfound"] {
+    outline: 2px solid #E22850 !important;
+  }

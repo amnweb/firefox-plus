@@ -80,11 +80,10 @@
   border-radius: var(--toolbarbutton-border-radius);
 }
 
-@media (-moz-platform: windows) {
   .searchbar-engine-one-off-item:focus-visible {
     outline: none;
   }
-}
+ 
 
 /* We don't handle `:active` because it doesn't work on the search or settings
    buttons due to event.preventDefault() in SearchOneOffs._on_mousedown(). */
@@ -165,19 +164,9 @@
   fill-opacity: var(--urlbar-icon-fill-opacity);
 }
 
-@media (-moz-platform: windows) {
   #PopupSearchAutoComplete {
     --panel-border-radius: var(--arrowpanel-border-radius);
   }
-}
-
-@media (-moz-platform: macos) {
-  #PopupSearchAutoComplete {
-    border-radius: 4px;
-  }
-}
-
-
 
 #urlbar[focused="true"]:not([suppress-focus-border]) > #urlbar-background, #searchbar:focus-within {
   outline: 1px solid !important;
