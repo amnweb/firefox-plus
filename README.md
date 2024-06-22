@@ -42,8 +42,8 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercon
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=amnweb/firefox-plus&type=Date)]
+![Star History Chart](https://api.star-history.com/svg?repos=amnweb/firefox-plus&type=Date)
 
 # License
 
-This project is licensed under the MIT License. Refer to the LICENSE file for details.
+This project is licensed under the MIT License.
