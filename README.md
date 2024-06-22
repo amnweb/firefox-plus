@@ -44,12 +44,6 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercon
 
 [![Star History Chart](https://api.star-history.com/svg?repos=amnweb/firefox-plus&type=Date)]
 
-# Credits
-
-This project is inspired by the following:
-* [Firefox-Mod-Blur](https://github.com/datguypiko/Firefox-Mod-Blur)
-* [edge-frfox](https://github.com/bmFtZQ/edge-frfox)
-
 # License
 
 This project is licensed under the MIT License. Refer to the LICENSE file for details.
