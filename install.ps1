@@ -77,6 +77,10 @@ Get-ChildItem -Path $firefoxProfilesPath | ForEach-Object {
         [PSCustomObject]@{
             "line"  = "user_pref(`"toolkit.telemetry.enabled`", false);"
             "desc"  = "Enable telemetry (disabled by default)"
+        },
+        [PSCustomObject]@{
+            "line"  = "user_pref(`"browser.newtabpage.activity-stream.newtabWallpapers.enabled`", false);"
+            "desc"  = "Enable New tab page Wallpaper"
         }
     )
 $fileContent = @"
