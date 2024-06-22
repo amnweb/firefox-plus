@@ -192,7 +192,32 @@ url("about:newtab") {
 
     #root .outer-wrapper .top-sites-list .top-site-outer {
         padding: 20px 20px 4px !important;
+        position: relative;
     }
+    @media (-moz-bool-pref: "browser.newtabpage.activity-stream.newtabWallpapers.enabled") {
+        #root .outer-wrapper .top-sites-list .top-site-outer:after {
+            content: "";
+            background: rgba(255, 255, 255, 0.1);
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            position: absolute;
+            z-index: -1;
+            margin: 10px;
+            border-radius: 8px;
+            backdrop-filter: blur(4px);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+        #root .outer-wrapper .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover):after {
+            background: rgba(255, 255, 255, 0)!important;
+            box-shadow: none!important;
+        }
+        #root .outer-wrapper .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover){
+            background: rgba(255, 255, 255, 0.1) !important;
+        }
+    }
+
     /* Firefox 124.0+ fix for homepage top-sites-list */
     #root .top-site-outer .top-site-inner > a {
         padding: 0 !important;
