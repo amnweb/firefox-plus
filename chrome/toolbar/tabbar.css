@@ -441,6 +441,7 @@ toolbarbutton[part="scrollbutton-down"] {
 
 #titlebar {
 	box-shadow: var(--fp-titlebar-shadow) !important;
+	z-index: 1;
 }
 
 #tabbrowser-tabs[closebuttons="activetab"]
