@@ -3,7 +3,7 @@ name: Bug report
 about: Create a report to help us improve
 title: ''
 labels: ''
-assignees: ''
+assignees: amnweb
 
 ---
 
@@ -17,8 +17,8 @@ Steps to reproduce the behavior:
 3. Scroll down to '....'
 4. See error
 
-**Screenshots**
-Add screenshots to help explain your problem.
+**Screenshots or video**
+Add screenshots or video to help explain your problem.
 
 **Firefox version (please complete the following information):**
  - Version [e.g. 127.0.1]
