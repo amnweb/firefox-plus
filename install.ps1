@@ -13,7 +13,22 @@ Clear-Host
 
 Write-Host ("{0}`n" -f ($logo -join "`n")) -ForegroundColor Blue
 
-$firefoxProfilesPath = Join-Path -Path "$env:APPDATA\Mozilla\Firefox\Profiles" -ChildPath "*.default-release"
+$profiles = Get-ChildItem -Path "$env:APPDATA\Mozilla\Firefox\Profiles" -Directory
+$choices = @()
+
+for ($i=0; $i -lt $profiles.Count; $i++) {
+  $choices += [System.Management.Automation.Host.ChoiceDescription]("$($profiles[$i].Name) &$($i+1)")
+}
+
+$choice = $host.UI.PromptForChoice('Select Profile Folder', 'Choose a profile', $choices, 0) + 1
+
+$firefoxProfilesPath = $($profiles[$choice].FullName)
+Write-Host "you chose $($firefoxProfilesPath)"
+$archivePath = "$($firefoxProfilesPath).$(Get-Date -f 'yyyyMMdd_hhmmss').zip"
+Write-Host "archiving to $($archivePath)"
+
+Compress-Archive -Path $firefoxProfilesPath -DestinationPath $archivePath
+
 $user_script = "user.js"
 if (-not (Test-Path -Path $firefoxProfilesPath)) {
     Write-Host "We can't find the profile directory, try manual installation."
