@@ -20,7 +20,7 @@ for ($i=0; $i -lt $profiles.Count; $i++) {
   $choices += [System.Management.Automation.Host.ChoiceDescription]("$($profiles[$i].Name) &$($i+1)")
 }
 
-$choice = $host.UI.PromptForChoice('Select Profile Folder', 'Choose a profile', $choices, 0) + 1
+$choice = $host.UI.PromptForChoice('Select Profile Folder', 'Choose a profile', $choices, 0)
 
 $firefoxProfilesPath = $($profiles[$choice].FullName)
 Write-Host "you chose $($firefoxProfilesPath)"
