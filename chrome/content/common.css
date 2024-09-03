@@ -67,25 +67,25 @@
     }
     @media (prefers-color-scheme: dark) {
 
-        button:not(.ghost-button):not(.enable-custom-image-input):not(.external-link):not(.context-menu-button.icon):not(.toggle-button):not(.category):not([role="menuitem"]):not(button[class*='devtools']):not(button[id*='toolbox']),
+        button:not(.ghost-button):not(.wallpapers-reset):not(.arrow-button):not(.enable-custom-image-input):not(.external-link):not(.context-menu-button.icon):not(.toggle-button):not(.category):not([role="menuitem"]):not(button[class*='devtools']):not(button[id*='toolbox']),
         menulist {
             border: 1px solid #44434f !important;
             background-color: light-dark(#EDEDED, #35343e) !important;
         }
 
-        button:hover:not(.ghost-button):not(.enable-custom-image-input):not(.external-link):not(.context-menu-button.icon):not(.toggle-button):not(.category):not([role="menuitem"]):not(button[class*='devtools']):not(button[id*='toolbox']),
+        button:hover:not(.ghost-button):not(.wallpapers-reset):not(.arrow-button):not(.enable-custom-image-input):not(.external-link):not(.context-menu-button.icon):not(.toggle-button):not(.category):not([role="menuitem"]):not(button[class*='devtools']):not(button[id*='toolbox']),
         menulist {
             border: 1px solid #4c4b57 !important;
             background-color: light-dark(#EDEDED, #393842) !important;
         }
 
-        button:hover:active:not(.ghost-button):not(.enable-custom-image-input):not(.external-link):not(.context-menu-button.icon):not(.toggle-button):not(.category):not([role="menuitem"]):not(button[class*='devtools']):not(button[id*='toolbox']),
+        button:hover:active:not(.ghost-button):not(.wallpapers-reset):not(.arrow-button):not(.enable-custom-image-input):not(.external-link):not(.context-menu-button.icon):not(.toggle-button):not(.category):not([role="menuitem"]):not(button[class*='devtools']):not(button[id*='toolbox']),
         menulist {
             border: 1px solid #4c4b57 !important;
             background-color: light-dark(#EDEDED, #403f49) !important;
         }
 
-        button:active:not(.ghost-button):not(.enable-custom-image-input):not(.external-link):not(.context-menu-button.icon):not(.toggle-button):not(.category):not([role="menuitem"]):not(button[class*='devtools']):not(button[id*='toolbox']),
+        button:active:not(.ghost-button):not(.wallpapers-reset):not(.arrow-button):not(.enable-custom-image-input):not(.external-link):not(.context-menu-button.icon):not(.toggle-button):not(.category):not([role="menuitem"]):not(button[class*='devtools']):not(button[id*='toolbox']),
         menulist {
             border: 1px solid #44434f !important;
             background-color: light-dark(#EDEDED, #2d2c35) !important;
@@ -96,7 +96,6 @@
         }
     }
 }
-
 
 
 /* preferences */
@@ -170,34 +169,33 @@
 
 @-moz-document url(about:newtab), url(about:home){
 
-/* Changes the logo on the about:home screen */
-.search-wrapper .logo-and-wordmark .logo {
-    background: url('../icons/firefox-logo.svg') !important;
+    /* Changes the logo on the about:home screen */
+    .search-wrapper .logo-and-wordmark .logo {
+        background: url('../icons/firefox-logo.svg') !important;
+    }
+
+    .search-wrapper .logo-and-wordmark::after {
+        content: "plus";
+        font-size: 16px;
+        margin-top: -8px;
+        margin-left: 4px;
+        opacity: 0.8;
+    }
+
 }
 
-.search-wrapper .logo-and-wordmark::after {
-    content: "plus";
-    font-size: 16px;
-    margin-top: -8px;
-    margin-left: 4px;
-    opacity: 0.8;
-}
-
-}
 
 
-
-@-moz-document url("about:home"),
-url("about:newtab") {
-
-    #root .outer-wrapper .top-sites-list .top-site-outer {
+@-moz-document url("about:home"), url("about:newtab") {
+     body.activity-stream .outer-wrapper .top-sites-list .top-site-outer {
         padding: 20px 20px 4px !important;
         position: relative;
+        margin-block-end:0 !important
     }
-    @media (-moz-bool-pref: "browser.newtabpage.activity-stream.newtabWallpapers.enabled") {
-        #root .outer-wrapper .top-sites-list .top-site-outer:after {
+      body.darkWallpaper .outer-wrapper .top-sites-list .top-site-outer:after,
+      body.lightWallpaper .outer-wrapper .top-sites-list .top-site-outer:after {
             content: "";
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.15);
             left: 0;
             top: 0;
             right: 0;
@@ -206,18 +204,20 @@ url("about:newtab") {
             z-index: -1;
             margin: 10px;
             border-radius: 8px;
-            backdrop-filter: blur(4px);
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(6px);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+            
         }
-        #root .outer-wrapper .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover):after {
+        body.activity-stream .outer-wrapper .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover):after {
             background: rgba(255, 255, 255, 0)!important;
             box-shadow: none!important;
+            backdrop-filter: blur(6px);
+            margin: auto;
         }
-        #root .outer-wrapper .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover){
+        body.activity-stream .outer-wrapper .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover){
             background: rgba(255, 255, 255, 0.1) !important;
         }
-    }
-
+ 
     /* Firefox 124.0+ fix for homepage top-sites-list */
     #root .top-site-outer .top-site-inner > a {
         padding: 0 !important;
@@ -256,6 +256,23 @@ url("about:newtab") {
     .top-site-outer .tile .icon-wrapper.letter-fallback::before {
         font-size: 48px !important;
         top: -3px !important;
+    }
+    /* Wallpapers selector */
+    .wallpaper-list {
+        margin: 0 !important;
+    }
+    .wallpaper-list.category {
+        background-color: rgba(66, 65, 77, 0.43) !important;
+        height: 100%;
+        inset-inline-start: 25px;
+        position: absolute;
+        top: 0;
+        inset-inline-start:0 !important;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100% !important;
+        backdrop-filter: blur(12px);
     }
 
 }
