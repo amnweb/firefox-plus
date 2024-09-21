@@ -114,7 +114,10 @@
 #TabsToolbar #TabsToolbar-customization-target > .toolbarbutton-1 {
 	margin-top: var(--tab-block-margin) !important;
 }
-
+#main-window[sizemode="maximized"] #tabbrowser-tabs,
+#main-window[sizemode="maximized"] #TabsToolbar #TabsToolbar-customization-target > .toolbarbutton-1 {
+    margin-top: 0 !important;
+}
 #TabsToolbar .toolbarbutton-1 {
 	margin: 0 !important;
 }
