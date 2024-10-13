@@ -238,7 +238,7 @@
         fill: light-dark(#000, #fff) !important
     }
     .outer-wrapper .body-wrapper .top-site-outer .top-site-inner .tile {
-        border-bottom: 1px solid #ffffff12 !important;
+        /* border-bottom: 1px solid #ffffff12 !important; */
         box-shadow: 0 2px 3px rgba(0, 0, 0, 0.35) !important;
     }
 
