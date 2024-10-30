@@ -17,7 +17,7 @@
   --rounded-corners-radius: 0;
 
 }
-#appcontent .browserStack {
+#browser .browserStack {
   margin-inline: var(--rounded-corners-padding) !important;
   margin-block-end: var(--rounded-corners-padding) !important;
 }
@@ -30,8 +30,8 @@
 #PersonalToolbar:after,
 #nav-bar:before,
 #nav-bar:after,
-#appcontent .browserStack:before,
-#appcontent .browserStack:after {
+#browser .browserStack:before,
+#browser .browserStack:after {
   content: "" !important;
   display: block !important;
   position: absolute !important;
@@ -54,14 +54,14 @@
   transform: rotate(270deg) !important;
 }
 
-#appcontent .browserStack:before,
-#appcontent .browserStack:after {
+#browser .browserStack:before,
+#browser .browserStack:after {
   bottom: 0 !important;
   left: 0 !important;
   transform: rotate(90deg) !important;
 }
 
-#appcontent .browserStack:after {
+#browser .browserStack:after {
   right: 0 !important;
   left: auto !important;
   transform: rotate(0deg) !important;
