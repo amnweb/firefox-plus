@@ -110,14 +110,14 @@
 	opacity: 0.7 !important;
 }
 
-#tabbrowser-tabs,
+/* #tabbrowser-tabs,
 #TabsToolbar #TabsToolbar-customization-target > .toolbarbutton-1 {
 	margin-top: var(--tab-block-margin) !important;
 }
 #main-window[sizemode="maximized"] #tabbrowser-tabs,
 #main-window[sizemode="maximized"] #TabsToolbar #TabsToolbar-customization-target > .toolbarbutton-1 {
     margin-top: 0 !important;
-}
+} */
 #TabsToolbar .toolbarbutton-1 {
 	margin: 0 !important;
 }
@@ -246,11 +246,12 @@
 	font-size: 12px !important;
 	padding-inline: 0 !important;
 	overflow-clip-margin: 8px !important;
+    padding-top: var(--tab-block-margin) !important;
 }
 
 #TabsToolbar .toolbarbutton-1 > .toolbarbutton-icon,
 #TabsToolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
-	border-radius: var(--toolbarbutton-border-radius) !important;
+	border-radius: var(--toolbarbutton-tabsline-border-radius) !important;
 	padding: var(--fp-toolbarbutton-inner-padding)
 		calc(var(--fp-toolbarbutton-inner-padding) + 2px) !important;
 }
@@ -279,6 +280,7 @@
 
 #tabbrowser-tabs #tabs-newtab-button {
 	margin-inline-start: 2px !important;
+    padding-top: var(--tab-block-margin) !important;
 }
 
 .tab-content[pinned] {
@@ -385,7 +387,7 @@ toolbarbutton[part="scrollbutton-down"] {
 }
 
 #TabsToolbar #TabsToolbar-customization-target > :not(#tabbrowser-tabs) {
-	margin-top: calc(2px + var(--tab-block-margin)) !important;
+	margin-top: var(--tab-block-margin) !important;
 }
 
 #tabbrowser-arrowscrollbox:not([overflowing]) .tabbrowser-tab {

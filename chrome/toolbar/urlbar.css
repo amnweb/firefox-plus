@@ -139,7 +139,11 @@
 #searchbar:hover {
 	outline: 1.5px solid var(--urlbar-hover-highlight-color);
 }
-
+ #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background, #searchbar:focus {
+ 
+    outline: 1.5px solid #0078d4 !important;
+} 
+ 
 /* move tracking protection button */
 #tracking-protection-icon-container,
 #page-action-buttons {
@@ -167,11 +171,11 @@
 		visibility: collapse !important;
 	}
 }
-
+/* 
 #urlbar[focused="true"]:not([suppress-focus-border]) > #urlbar-background,
 #searchbar:focus-within {
 	outline-offset: calc(var(--focus-outline-width) * -1 + 1px) !important;
-}
+} */
 
 .urlbarView {
 	padding-block-end: 8px !important;
