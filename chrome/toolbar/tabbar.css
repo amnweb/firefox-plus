@@ -61,7 +61,7 @@
 		position: absolute !important;
 		width: 8px !important;
 		height: 8px !important;
-		bottom: 0 !important;
+		bottom: -0.01px !important;
 		pointer-events: none !important;
 		clip-path: inset(0);
 	}
