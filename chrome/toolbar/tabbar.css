@@ -2,7 +2,7 @@
 	--lwt-selected-tab-background-color: unset !important;
 	--tab-block-margin: 8px !important;
 	--tab-selected-bgcolor: var(--toolbar-bgcolor) !important;
-	& #titlebar {
+	& #TabsToolbar {
 		--tab-min-height: 32px !important;
 		--inline-tab-padding: 11px !important;
 		--tab-border-radius: 8px !important;
@@ -14,6 +14,11 @@
 		--tab-shadow-max-size: 0 !important;
 	}
 }
+#tabbrowser-tabs {
+    &[orient="horizontal"] {
+      min-height: var(--tab-min-height) !important;
+    }
+  }
 .tabbrowser-tab .tab-stack {
 	&::before,
 	&::after {
@@ -146,11 +151,10 @@
 }
 
 .tab-close-button {
-	margin-inline-end: 8px !important;
-	width: 17px !important;
-	height: 17px !important;
+	width: 16px !important;
+	height: 16px !important;
 	padding: 4px !important;
-	border-radius: 2px !important;
+	border-radius: 4px !important;
 }
 
 .tab-throbber:not([pinned]),
@@ -444,7 +448,7 @@ toolbarbutton[part="scrollbutton-down"] {
 	box-shadow: var(--fp-tab-shadow) !important;
 }
 
-#titlebar {
+#TabsToolbar {
 	box-shadow: var(--fp-titlebar-shadow) !important;
 	z-index: 1;
 }
@@ -455,9 +459,9 @@ toolbarbutton[part="scrollbutton-down"] {
 	--tab-label-mask-size: 1em !important;
 }
 
-.tab-content {
+/* .tab-content {
 	padding-inline: var(--inline-tab-padding) 0 !important;
-}
+} */
 
 /* new private browsing indicator */
 :root[privatebrowsingmode="temporary"] #TabsToolbar .toolbar-items,
@@ -514,8 +518,21 @@ toolbarbutton[part="scrollbutton-down"] {
 	> :not(.tab-icon-overlay) {
 	opacity: 1 !important;
 }
+.tab-icon-overlay {  
+      &:is([soundplaying], [muted], [activemedia-blocked]) {
+        background-color:transparent !important;
+        fill: white !important;
+      }
+      &:hover,
+      &:hover:active {
+        background-color:transparent !important;
+      }
+    }
 .tabbrowser-tab
 	> .tab-stack
 	> .tab-content[pinned][titlechanged]:not([selected]) {
 	background-position: 4px 4px !important;
+}
+.titlebar-spacer[type="post-tabs"] {
+    width: 0 !important;
 }

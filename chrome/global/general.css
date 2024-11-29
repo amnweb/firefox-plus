@@ -842,3 +842,10 @@ menuitem[checked="true"]>.menu-iconic-left,
 .findbar-textbox[status="notfound"] {
     outline: 2px solid #E22850 !important;
   }
+
+  #tabbrowser-tabbox {  
+    @media (-moz-bool-pref: "sidebar.revamp") {
+      outline: 0px solid transparent !important;
+      box-shadow: none !important
+    }
+  }

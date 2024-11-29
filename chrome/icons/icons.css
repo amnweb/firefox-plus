@@ -45,29 +45,27 @@
 			list-style-image: url("mac-close.svg") !important;
 		}
 	}
-
+    .titlebar-buttonbox {
+        margin: 0 8px !important;
+    }
 	.titlebar-button {
 		& > .toolbarbutton-icon {
-			width: 24px !important;
-			height: 24px !important;
+			width: 14px !important;
+			height: 14px !important;
 		}
 	}
 	.titlebar-button {
-		padding: 0 0px !important;
+		padding: 0 4px !important;
 		filter: grayscale(1) brightness(6);
 		opacity: 0.25 !important;
 	}
 
-	#titlebar:hover .titlebar-button {
+	#TabsToolbar:hover .titlebar-button {
 		filter: grayscale(0) brightness(1);
 		opacity: 0.8 !important;
 	}
 
-	:-moz-window-inactive .titlebar-button {
-		opacity: 0.5 !important;
-	}
-
-	.titlebar-button:hover,
+ 	.titlebar-button:hover,
 	.titlebar-button:not(.titlebar-close):hover {
 		background-color: transparent !important;
 	}
@@ -75,7 +73,7 @@
 	toolbar[brighttext] .titlebar-close:hover:active {
 		background-color: transparent !important;
 	}
-	#titlebar .titlebar-button:hover {
+	#TabsToolbar .titlebar-button:hover {
 		opacity: 1 !important;
 	}
 }

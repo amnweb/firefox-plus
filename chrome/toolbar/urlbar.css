@@ -62,11 +62,11 @@
 	padding-block: 8px 0 !important;
 }
 
-/* breakout */
-#urlbar[breakout][breakout-extend] {
+ 
+/* #urlbar[breakout][breakout-extend] {
 	left: 0 !important;
 	width: 100% !important;
-}
+} */
 
 #urlbar[breakout][breakout-extend] > #urlbar-input-container {
 	padding-inline: var(--urlbar-container-padding) !important;
@@ -151,7 +151,7 @@
 	order: 2 !important;
 }
 
-#urlbar,
+ 
 #searchbar {
 	padding: 0 4px !important;
 }

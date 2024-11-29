@@ -1,4 +1,4 @@
-:root[tabsintitlebar] #titlebar:-moz-window-inactive {
+:root[tabsintitlebar] #TabsToolbar:-moz-window-inactive {
   opacity: 1 !important;
 }
 #main-window:not([chromehidden~="toolbar"]) {

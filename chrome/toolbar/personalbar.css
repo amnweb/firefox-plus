@@ -92,9 +92,9 @@ toolbarbutton.bookmark-item[open="true"] > .toolbarbutton-icon{
   z-index: 1;
   height: 34px;
 }
-.browser-toolbar:not(.titlebar-color):not(.browser-toolba) {
+/* .browser-toolbar:not(.titlebar-color):not(.browser-toolba) {
   background-color: var(--toolbar-bgcolor) !important;
-}
+} */
 :root[uidensity="compact"] #PersonalToolbar{
   --toolbarbutton-outer-padding: 1px !important;
 }
@@ -119,19 +119,19 @@ toolbarbutton.bookmark-item[open="true"] > .toolbarbutton-icon{
 #navigator-toolbox:is(:hover,:focus-within){
   border-bottom: 0;
 }
-#navigator-toolbox:hover > #PersonalToolbar
+#navigator-toolbox:hover >  #PersonalToolbar
 {
   transition-delay: 800ms !important;
-  transform: rotateX(var(--autohide-toolbar-hover-rotation,0));
+  transform: rotateX(var(--autohide-toolbar-hover-rotation,0)) !important;
 }
 
 #navigator-toolbox:hover > #nav-bar:focus-within + #PersonalToolbar,
-#navigator-toolbox:hover > #nav-bar:focus-within + #titlebar{  
-  transform: rotateX(0);
+#navigator-toolbox:hover > #nav-bar:focus-within + #TabsToolbar{  
+  transform: rotateX(0)  !important;
 }
 
 }
-
 #navigator-toolbox {
+  z-index: 3 !important;
   border-bottom: 0 !important
 }

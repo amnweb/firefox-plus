@@ -9,7 +9,6 @@ user_pref("browser.tabs.tabClipWidth", 86);
 user_pref("fp.tweak.autohide-bookmarks", true);
 user_pref("fp.tweak.macos-button", false);
 user_pref("fp.tweak.rounded-corners", true);
-user_pref("fp.tweak.sidebar-enabled", false);
 
 // disable spell checking
 user_pref("layout.spellcheckDefault", 0);

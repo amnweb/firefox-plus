@@ -67,10 +67,6 @@ Get-ChildItem -Path $firefoxProfilesPath | ForEach-Object {
             "desc"  = "Enable rounded corners"
         },
         [PSCustomObject]@{
-            "line"  = "user_pref(`"fp.tweak.sidebar-enabled`", true);"
-            "desc"  = "Enable sidebar support"
-        },
-        [PSCustomObject]@{
             "line"  = "user_pref(`"app.update.auto`", false);"
             "desc"  = "Enable Firefox autoupdate"
         },
