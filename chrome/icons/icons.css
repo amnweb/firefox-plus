@@ -727,7 +727,9 @@ menuitem > .menu-iconic-text {
 #placesContext_cut {
 	--menu-image: url("edit-cut.svg");
 }
-
+#placesContext_sortBy\:name {
+    --menu-image: url("sort.svg");
+}
 #context-delete,
 .customize-context-removeExtension,
 .unified-extensions-context-menu-remove-extension,
