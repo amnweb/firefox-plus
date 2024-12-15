@@ -721,7 +721,9 @@ menuitem > .menu-iconic-text {
 #placesContext_paste_group {
 	--menu-image: url("edit-paste.svg");
 }
-
+.textbox-contextmenu menuitem.searchbar-paste-and-search {
+	--menu-image: url("edit-paste.svg");
+}
 #context-cut,
 .textbox-contextmenu menuitem[cmd*="cut"],
 #placesContext_cut {
