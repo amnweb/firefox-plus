@@ -769,6 +769,9 @@ menuitem[id="placesContext_deleteHost"] {
 #context-searchselect {
 	--menu-image: url("search-glass.svg");
 }
+#context-searchselect-private {
+    --menu-image: url("search-glass.svg");
+}
 #context-translate-selection {
     --menu-image: url("translations.svg");
 }
