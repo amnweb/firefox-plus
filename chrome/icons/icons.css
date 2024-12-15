@@ -166,7 +166,12 @@
 #appMenu-help-button2 {
 	list-style-image: url("help.svg") !important;
 }
-
+#appMenu-quit-button2 {
+    list-style-image: url("close.svg") !important;
+}
+#appMenu-report-broken-site-button {
+    list-style-image: url("report.svg") !important;
+}
 #new-tab-button {
 	list-style-image: url("new-tab.svg") !important;
 }
@@ -762,7 +767,9 @@ menuitem[id="placesContext_deleteHost"] {
 #context-searchselect {
 	--menu-image: url("search-glass.svg");
 }
-
+#context-translate-selection {
+    --menu-image: url("translations.svg");
+}
 #context-viewimage {
 	--menu-image: url("image-open.svg");
 }

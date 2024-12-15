@@ -662,6 +662,7 @@ menupopup menu[disabled="true"],
 menupopup menuitem[disabled="true"] {
   color: var(--panel-disabled-color) !important;
   background: none !important;
+  opacity: 0.5 !important;
 
 }
 
