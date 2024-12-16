@@ -101,5 +101,5 @@ user_pref("ui.systemUsesDarkTheme", 1);`r`n
     [void](New-Item -Path $user_script -ItemType File -Force)
     Set-Content -Path $user_script -Value $fileContent
     Write-Host "`r`nDone, Restart Firefox"  -ForegroundColor Green
-    Write-Host "After restarting Firefox, you can delete the `"$user_script`" file from the profile directory`r`ny" -ForegroundColor Greeny
+    Write-Host "After restarting Firefox, you can delete the `"$user_script`" file from the profile directory`r`ny" -ForegroundColor Green
 }
