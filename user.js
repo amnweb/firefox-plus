@@ -39,10 +39,6 @@ user_pref("browser.send_pings.require_same_host", true);
 user_pref("toolkit.telemetry.enabled", false);
 // Disable (Windows-only) scheduled task which runs in the background to collect and submit data about the browser
 user_pref("default-browser-agent", false);
-// Better font rendering
-//user_pref("gfx.webrender.quality.force-subpixel-aa-where-possible",true);
-//user_pref("gfx.font_rendering.cleartype_params.rendering_mode", 5);
-// Disable Container Tabs
-//user_pref("privacy.userContext.enabled",false);
-//user_pref("privacy.userContext.ui.enabled",false);
-//user_pref("privacy.userContext.newTabContainerOnLeftClick.enabled", false);
+// Better fotn rendering
+user_pref("gfx.font_rendering.cleartype_params.force_gdi_classic_for_families", "");
+user_pref("gfx.font_rendering.cleartype_params.enhanced_contrast", 75);
