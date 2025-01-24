@@ -39,6 +39,6 @@ user_pref("browser.send_pings.require_same_host", true);
 user_pref("toolkit.telemetry.enabled", false);
 // Disable (Windows-only) scheduled task which runs in the background to collect and submit data about the browser
 user_pref("default-browser-agent", false);
-// Better fotn rendering
+// Better font rendering
 user_pref("gfx.font_rendering.cleartype_params.force_gdi_classic_for_families", "");
-user_pref("gfx.font_rendering.cleartype_params.enhanced_contrast", 75);
+user_pref("gfx.font_rendering.cleartype_params.enhanced_contrast", 50);

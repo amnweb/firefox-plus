@@ -33,47 +33,80 @@ Get-ChildItem -Path $firefoxProfilesPath | ForEach-Object {
     Write-Host "Config user.js"
     $confirmAdd = {
         param($line)
-        do {
-            Write-Host "$($line.desc)? (y/n) " -NoNewline
-            $keyPress = [System.Console]::ReadKey()
-    
-            if ($keyPress.Key -ne [System.ConsoleKey]::Y -and $keyPress.Key -ne [System.ConsoleKey]::N) {
-                Write-Host " Invalid response, please answer yes or no (y/n)" -ForegroundColor Red
-            }else{
-                Write-Host ""
+        if ($line.type -eq "boolean") {
+            do {
+                Write-Host "$($line.desc)? (y/n) " -NoNewline
+                $keyPress = [System.Console]::ReadKey()
+        
+                if ($keyPress.Key -ne [System.ConsoleKey]::Y -and $keyPress.Key -ne [System.ConsoleKey]::N) {
+                    Write-Host " Invalid response, please answer yes or no (y/n)" -ForegroundColor Red
+                }else{
+                    Write-Host ""
+                }
+            } 
+            while ($keyPress.Key -ne [System.ConsoleKey]::Y -and $keyPress.Key -ne [System.ConsoleKey]::N)
+            
+            if ($keyPress.Key -eq [System.ConsoleKey]::Y) {
+                return @($line, 'y')
+            } else {
+                return @($line, 'n')
             }
         } 
-        while ($keyPress.Key -ne [System.ConsoleKey]::Y -and $keyPress.Key -ne [System.ConsoleKey]::N)
-        if ($keyPress.Key -eq [System.ConsoleKey]::Y) {
-            return @($line, 'y')
-        } elseif ($keyPress.Key -eq [System.ConsoleKey]::N) {
-            return @($line, 'n')
-        }else{
-            return $null
+        elseif ($line.type -eq "mixed") {
+            do {
+                Write-Host "$($line.desc)? (y/n) " -NoNewline
+                $keyPress = [System.Console]::ReadKey()
+                if ($keyPress.Key -ne [System.ConsoleKey]::Y -and $keyPress.Key -ne [System.ConsoleKey]::N) {
+                    Write-Host " Invalid response, please answer yes or no (y/n)" -ForegroundColor Red
+                }else{
+                    Write-Host ""
+                }
+            }
+            while ($keyPress.Key -ne [System.ConsoleKey]::Y -and $keyPress.Key -ne [System.ConsoleKey]::N)
+            if ($keyPress.Key -eq [System.ConsoleKey]::Y) {
+                return @($line, 'y')
+            } else {
+                return @($line, 'n')
+            }
+        }
+        else {
+            return @($line, 'default')
         }
     }
+    
     
     $confirmAddLines = @(
         [PSCustomObject]@{
             "line"  = "user_pref(`"fp.tweak.autohide-bookmarks`", true);"
             "desc"  = "Enable autohide bookmarks"
+            "type"  = "boolean"
         },
         [PSCustomObject]@{
             "line"  = "user_pref(`"fp.tweak.macos-button`", true);"
             "desc"  = "Enable macos button"
+            "type"  = "boolean"
         },
         [PSCustomObject]@{
             "line"  = "user_pref(`"fp.tweak.rounded-corners`", true);"
             "desc"  = "Enable rounded corners"
+            "type"  = "boolean"
         },
         [PSCustomObject]@{
             "line"  = "user_pref(`"app.update.auto`", false);"
             "desc"  = "Enable Firefox autoupdate"
+            "type"  = "boolean"
         },
         [PSCustomObject]@{
             "line"  = "user_pref(`"toolkit.telemetry.enabled`", false);"
             "desc"  = "Enable telemetry (disabled by default)"
-        } 
+            "type"  = "boolean"
+        },
+        [PSCustomObject]@{
+            "line"  = "user_pref(`"gfx.font_rendering.cleartype_params.force_gdi_classic_for_families`", """");" + 
+                            "`r`nuser_pref(`"gfx.font_rendering.cleartype_params.enhanced_contrast`", 50);"
+            "desc"  = "Enable better font rendering"
+            "type"  = "mixed"
+        }
     )
 $fileContent = @"
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
@@ -87,14 +120,24 @@ user_pref("ui.systemUsesDarkTheme", 1);`r`n
 "@
     
     foreach ($lineObj in $confirmAddLines) {
-        $result  = $confirmAdd.Invoke($lineObj)
+        $result = $confirmAdd.Invoke($lineObj)
         $line = $result[0]
         $answer = $result[1]
-        if ($line -ne $null -and $answer -ne 'n') {
-            $fileContent += $line.line + "`r`n"
+        
+        if ($line.type -eq "boolean") {
+            if ($answer -eq 'y') {
+                $fileContent += $line.line + "`r`n"
+            } else {
+                $fileContent += $line.line.Replace('true','false') + "`r`n"
+            }
+        } 
+        elseif ($line.type -eq "mixed") {
+            if ($answer -eq 'y') {
+                $fileContent += $line.line + "`r`n"
+            }
         }
-        if ($line -ne $null -and $answer -ne 'y') {
-            $fileContent += $line.line.Replace('true','false') + "`r`n"
+        else {
+            $fileContent += $line.line + "`r`n"
         }
     }
     
