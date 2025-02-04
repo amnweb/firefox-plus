@@ -5,8 +5,11 @@
   --rounded-corners-padding: 4px;
   --browser-frame-bgcolor: var(--toolbar-bgcolor, var(--lwt-accent-color));
   --rounded-corners-radius: 8px;
+  --rounded-corners-in-fullscreen: block
 }
-
+:root:is[inFullscreen] {
+	--rounded-corners-in-fullscreen: none
+}
 #navigator-toolbox {
   border-bottom: none !important;
 }
@@ -25,7 +28,9 @@
 #nav-bar {
   overflow: initial !important;
 }
-
+:root:is([inFullscreen]) {
+	--rounded-corners-in-fullscreen: none !important;
+}
 #PersonalToolbar:before,
 #PersonalToolbar:after,
 #nav-bar:before,
@@ -33,7 +38,7 @@
 #browser .browserStack:before,
 #browser .browserStack:after {
   content: "" !important;
-  display: block !important;
+  display: var(--rounded-corners-in-fullscreen) !important;
   position: absolute !important;
   width: 16px !important;
   height: 16px !important;
@@ -46,7 +51,9 @@
   box-shadow: 0 0 0 18px var(--toolbar-bgcolor) !important;
   z-index: 1;
 }
-
+:root:is[inFullscreen] {
+	--rounded-corners-in-fullscreen: none !important;
+}
 #PersonalToolbar:after,
 #nav-bar:after {
   right: var(--rounded-corners-padding) !important;
