@@ -12,7 +12,7 @@
 2. Download and copy the `chrome` folder and `user.js` into the profile folder.
 3. Restart Firefox.
 
-> **Note:** FireFox v133.0+ only
+> **Note:** FireFox v135+ only
 
 # Tweaks
 - To enable macOS button style, open `user.js`, find `fp.tweak.macos-button` and set it to `true`.  
