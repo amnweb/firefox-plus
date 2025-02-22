@@ -423,11 +423,11 @@ toolbarbutton[part="scrollbutton-down"] {
 
 /* #tabbrowser-arrowscrollbox:not([overflowing]) .tabbrowser-tab:first-of-type {
 	margin-inline-start: 14px !important;
-}
+}*/
 #tabbrowser-arrowscrollbox:not([overflowing]) .tabbrowser-tab:last-of-type {
 	margin-inline-end: 6px !important;
 }
-#tabbrowser-arrowscrollbox:not([overflowing]) tab-group .tabbrowser-tab:first-of-type {
+/*#tabbrowser-arrowscrollbox:not([overflowing]) tab-group .tabbrowser-tab:first-of-type {
 	margin-inline-start: 0px !important;
 }
 #tabbrowser-arrowscrollbox:not([overflowing]) tab-group .tabbrowser-tab:last-of-type {
