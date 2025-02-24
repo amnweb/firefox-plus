@@ -6,6 +6,7 @@
     --in-content-primary-button-background: #0055D7 !important;
     --in-content-primary-button-background-hover: #0960e4 !important;
     --in-content-primary-button-background-active: #0751be !important;
+    --inactive-titlebar-opacity: 1 !important;
 }
 /* Change Colour of page when loading */
 :root:not(:-moz-lwtheme) #tabbrowser-tabpanels {

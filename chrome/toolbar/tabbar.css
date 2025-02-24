@@ -316,8 +316,7 @@
 }
 .tab-group-label {
     tab-group[collapsed] > .tab-group-label-container > & {
-        filter: grayscale(0.2);
-        opacity: 0.8 !important;
+        opacity: 0.85 !important;
     }
   }
  
@@ -336,7 +335,8 @@
     .tab-group-label {
         margin-top: 14px !important;
         border-radius: 4px !important;
-        padding-inline: 4px !important
+        padding-inline: 4px !important;
+        font-size: 90% !important;
       }
 /* END:Tasb groups */
 toolbarbutton[part="scrollbutton-up"],
@@ -421,18 +421,18 @@ toolbarbutton[part="scrollbutton-down"] {
 	margin-top: var(--tab-block-margin) !important;
 }
 
-/* #tabbrowser-arrowscrollbox:not([overflowing]) .tabbrowser-tab:first-of-type {
-	margin-inline-start: 14px !important;
-}*/
+#tabbrowser-arrowscrollbox:not([overflowing]) .tabbrowser-tab:first-of-type {
+	margin-inline-start: 6px !important;
+}
 #tabbrowser-arrowscrollbox:not([overflowing]) .tabbrowser-tab:last-of-type {
 	margin-inline-end: 6px !important;
 }
-/*#tabbrowser-arrowscrollbox:not([overflowing]) tab-group .tabbrowser-tab:first-of-type {
+ #tabbrowser-arrowscrollbox:not([overflowing]) tab-group[collapsed] .tabbrowser-tab:first-of-type {
 	margin-inline-start: 0px !important;
 }
-#tabbrowser-arrowscrollbox:not([overflowing]) tab-group .tabbrowser-tab:last-of-type {
+#tabbrowser-arrowscrollbox:not([overflowing]) tab-group[collapsed] .tabbrowser-tab:last-of-type {
 	margin-inline-end: 0px !important;
-} */
+}
 
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
 	> #tabbrowser-arrowscrollbox
