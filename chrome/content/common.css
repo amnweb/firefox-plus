@@ -188,7 +188,7 @@
 
 @-moz-document url("about:home"), url("about:newtab") {
      body.activity-stream .outer-wrapper .top-sites-list .top-site-outer {
-        padding: 20px 20px 4px !important;
+        padding: 14px 20px 4px !important;
         position: relative;
         margin-block-end:0 !important
     }
@@ -228,10 +228,13 @@
         border-radius: 50% !important;
 
     }
+    .layout-variant-b .top-sites-list {
+        row-gap: var(--space-large) !important;
+    }
     .top-site-outer .context-menu-button {
         transform: rotate(90deg);
         right: -20px !important;
-        top: -16px !important;
+        top: -8px !important;
         background-color: transparent !important;
     }
     .top-site-outer .context-menu-button:is(:active, :focus) {
@@ -241,7 +244,9 @@
         /* border-bottom: 1px solid #ffffff12 !important; */
         box-shadow: 0 2px 3px rgba(0, 0, 0, 0.35) !important;
     }
-
+    .layout-variant-b .top-site-outer {
+        width: calc(var(--size-item-large) * 3.75) !important
+    }
     #root .outer-wrapper .top-site-outer .default-icon {
         background-size: 48px !important;
         height: 72px !important;
@@ -276,5 +281,3 @@
     }
 
 }
-
- 
