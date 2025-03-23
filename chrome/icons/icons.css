@@ -932,11 +932,14 @@ menuitem[contexttype="fullscreen"][label*="Exit"] {
 }
 
 #context_pinTab,
-#context_unpinTab,
 #context_pinSelectedTabs,
-#context_unpinSelectedTabs,
 .customize-context-moveToPanel {
-	--menu-image: url("pin.svg");
+  --menu-image: url("pin.svg"); 
+}
+
+#context_unpinTab,
+#context_unpinSelectedTabs {
+  --menu-image: url("unpin.svg"); 
 }
 .customize-context-removeFromToolbar {
 	--menu-image: url("unpin.svg");
