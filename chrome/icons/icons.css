@@ -700,6 +700,10 @@ menuitem > .menu-iconic-text {
 #toolbar-context-undoCloseTab {
 	--menu-image: url("edit-undo.svg");
 }
+
+#context_unloadTab{
+	--menu-image: url("unloadTab.svg");
+}
 #toggle_toolbar-menubar {
 	--menu-image: url("menu-bar.svg");
 }
@@ -866,6 +870,15 @@ menuitem[id="placesContext_openBookmarkContainer:tabs"] {
 #context_openANewTab,
 #toolbar-context-openANewTab {
 	--menu-image: url("new-tab-image.svg");
+}
+
+#context_moveTabToGroup,
+#context_moveTabToNewGroup{
+	--menu-image: url("moveTabToGroup.svg");
+}
+	
+#context_ungroupTab{
+	--menu-image: url("ungroupTab.svg");
 }
 
 #context-openlinkinusercontext-menu,
