@@ -1,43 +1,43 @@
 #PersonalToolbar {
-  --bookmark-block-padding: 6px !important;
-  position: relative;
- }
- 
- /* Bookmarks bar item sizing */
+    --bookmark-block-padding: 6px !important;
+    position: relative;
+}
+
+/* Bookmarks bar item sizing */
 #personal-toolbar-empty-description,
 #PersonalToolbar .toolbarbutton-1,
 toolbarbutton.bookmark-item:not(.subviewbutton) {
-  margin-block: 2px 4px !important;
-  padding-block: var(--bookmark-block-padding) !important;
-  padding-inline: 6px !important;
-  font-size: 12px !important;
+    margin-block: 2px 4px !important;
+    padding-block: var(--bookmark-block-padding) !important;
+    padding-inline: 6px !important;
+    font-size: 12px !important;
 
- 
+
     & .toolbarbutton-text {
-      margin-block: -1px 0 !important;
+        margin-block: -1px 0 !important;
     }
- 
+
 }
 
 #PersonalToolbar .toolbarbutton-1 {
-  padding: 0 !important;
+    padding: 0 !important;
 }
 
 /* Bookmarks bar separators */
-#PlacesToolbarItems > toolbarseparator {
-  padding-inline: 1px !important;
-  &::before {
-    content: "";
-    display: block;
-    border-inline-start: 1px solid var(--toolbarseparator-color) !important;
-    margin-block: 8px 10px !important;
-    border-image-source: none !important;
-  }
+#PlacesToolbarItems>toolbarseparator {
+    padding-inline: 1px !important;
+    &::before {
+        content: "";
+        display: block;
+        border-inline-start: 1px solid var(--toolbarseparator-color) !important;
+        margin-block: 8px 10px !important;
+        border-image-source: none !important;
+    }
 }
 
 /* Left and Right padding of bookmarks bar */
 #PersonalToolbar {
-  padding-inline: calc(var(--toolbar-start-end-padding) - 2px) calc(var(--toolbar-start-end-padding) + 6px) !important;
+    padding-inline: calc(var(--toolbar-start-end-padding) - 2px) calc(var(--toolbar-start-end-padding) + 6px) !important;
 }
 
 /* Spacing between icon and label for bookmarks bar items */
@@ -45,93 +45,94 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #bookmarks-toolbar-placeholder>.toolbarbutton-icon,
 #PlacesToolbarItems>.bookmark-item>.toolbarbutton-icon[label]:not([label=""]),
 #OtherBookmarks.bookmark-item[container]>.toolbarbutton-icon {
-  margin-inline-end: 4px !important;
+    margin-inline-end: 4px !important;
 }
 
 /* Sizing for bookmarks bar icons */
 #PersonalToolbar .toolbarbutton-1>.toolbarbutton-icon {
-  width: calc(2 * var(--bookmark-block-padding) + 16px) !important;
-  height: calc(2 * var(--bookmark-block-padding) + 16px) !important;
-  padding: var(--bookmark-block-padding) !important;
+    width: calc(2 * var(--bookmark-block-padding) + 16px) !important;
+    height: calc(2 * var(--bookmark-block-padding) + 16px) !important;
+    padding: var(--bookmark-block-padding) !important;
 }
 
 toolbarbutton.bookmark-item:not(.subviewbutton, [disabled="true"], [open]):hover {
-  background-color: rgba(255, 255, 255, 0.1) !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
 }
 toolbarbutton.bookmark-item:hover:active:not(.subviewbutton, [disabled="true"]) {
-  background-color: rgba(255, 255, 255, 0.2) !important;
+    background-color: rgba(255, 255, 255, 0.2) !important;
 }
 toolbarbutton.bookmark-item[open="true"] {
-  background-color: rgba(255, 255, 255, 0.2) !important;
+    background-color: rgba(255, 255, 255, 0.2) !important;
 }
-toolbarbutton.bookmark-item[open="true"] > .toolbarbutton-icon{
-  filter: brightness(2);
+toolbarbutton.bookmark-item[open="true"]>.toolbarbutton-icon {
+    filter: brightness(2);
 }
 :root {
-  --bookmarks-toolbar-overlapping-browser-height: 34px !important;
+    --bookmarks-toolbar-overlapping-browser-height: 34px !important;
 }
 
 /* Autohide bookmark toolbar */
-@media (-moz-bool-pref: "fp.tweak.autohide-bookmarks") {
-#PersonalToolbar{
-  --bookmarks-padding: 4px;
-  --autohide-toolbar-delay: 600ms;
-  --autohide-toolbar-focus-rotation: 0deg;
-  --autohide-toolbar-hover-rotation: 0deg;
-}
-:root {
-  --firefoxcss-bookmarks-bg-color: transparent !important;
-}
-:root[uidensity="touch"] #PersonalToolbar{ --bookmarks-padding: 7px }
-#PersonalToolbar:not([customizing]){
-  position: relative;
-  margin-bottom: -34px;
-  transform: rotateX(90deg);
-  transform-origin: top;
-  transition: transform 135ms linear var(--autohide-toolbar-delay) !important;
-  z-index: 1;
-  height: 34px;
-}
-/* .browser-toolbar:not(.titlebar-color):not(.browser-toolba) {
+@media -moz-pref("fp.tweak.autohide-bookmarks") {
+    #PersonalToolbar {
+        --bookmarks-padding: 4px;
+        --autohide-toolbar-delay: 600ms;
+        --autohide-toolbar-focus-rotation: 0deg;
+        --autohide-toolbar-hover-rotation: 0deg;
+    }
+    :root {
+        --firefoxcss-bookmarks-bg-color: transparent !important;
+    }
+    :root[uidensity="touch"] #PersonalToolbar {
+        --bookmarks-padding: 7px
+    }
+    #PersonalToolbar:not([customizing]) {
+        position: relative;
+        margin-bottom: -34px;
+        transform: rotateX(90deg);
+        transform-origin: top;
+        transition: transform 135ms linear var(--autohide-toolbar-delay) !important;
+        z-index: 1;
+        height: 34px;
+    }
+    /* .browser-toolbar:not(.titlebar-color):not(.browser-toolba) {
   background-color: var(--toolbar-bgcolor) !important;
 } */
-:root[uidensity="compact"] #PersonalToolbar{
-  --toolbarbutton-outer-padding: 1px !important;
-}
-#PersonalToolbar:not(:-moz-lwtheme){
-  --toolbar-bgcolor: #f9f9fb;
-}
-@media (prefers-color-scheme: dark){
-  #PersonalToolbar:not(:-moz-lwtheme){
-    --toolbar-bgcolor: rgb(43, 42, 51);
-  }
-}
-#PlacesToolbarItems > .bookmark-item,
-#OtherBookmarks,
-#PersonalToolbar > #import-button{
-  padding-block: var(--bookmarks-padding) !important;
-}
+    :root[uidensity="compact"] #PersonalToolbar {
+        --toolbarbutton-outer-padding: 1px !important;
+    }
+    #PersonalToolbar:not(:-moz-lwtheme) {
+        --toolbar-bgcolor: #f9f9fb;
+    }
+    @media (prefers-color-scheme: dark) {
+        #PersonalToolbar:not(:-moz-lwtheme) {
+            --toolbar-bgcolor: rgb(43, 42, 51);
+        }
+    }
+    #PlacesToolbarItems>.bookmark-item,
+    #OtherBookmarks,
+    #PersonalToolbar>#import-button {
+        padding-block: var(--bookmarks-padding) !important;
+    }
 
-#nav-bar:focus-within + #PersonalToolbar{
-  transition-delay: 100ms !important;
-  transform: rotateX(var(--autohide-toolbar-focus-rotation,0));
-}
-#navigator-toolbox:is(:hover,:focus-within){
-  border-bottom: 0;
-}
-#navigator-toolbox:hover >  #PersonalToolbar
-{
-  transition-delay: 800ms !important;
-  transform: rotateX(var(--autohide-toolbar-hover-rotation,0)) !important;
-}
+    #nav-bar:focus-within+#PersonalToolbar {
+        transition-delay: 100ms !important;
+        transform: rotateX(var(--autohide-toolbar-focus-rotation, 0));
+    }
+    #navigator-toolbox:is(:hover, :focus-within) {
+        border-bottom: 0;
+    }
+    #navigator-toolbox:hover>#PersonalToolbar {
+        transition-delay: 800ms !important;
+        transform: rotateX(var(--autohide-toolbar-hover-rotation, 0)) !important;
+    }
 
-#navigator-toolbox:hover > #nav-bar:focus-within + #PersonalToolbar,
-#navigator-toolbox:hover > #nav-bar:focus-within + #TabsToolbar{  
-  transform: rotateX(0)  !important;
-}
+    #navigator-toolbox:hover>#nav-bar:focus-within+#PersonalToolbar,
+    #navigator-toolbox:hover>#nav-bar:focus-within+#TabsToolbar {
+        transform: rotateX(0) !important;
+    }
 
 }
 #navigator-toolbox {
-  z-index: 3 !important;
-  border-bottom: 0 !important
+    z-index: 3 !important;
+    border-bottom: 0 !important
 }
