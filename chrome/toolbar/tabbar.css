@@ -321,7 +321,7 @@
   }
  
 .tab-group-label-container {
-    @media not (-moz-bool-pref: "sidebar.verticalTabs") {
+    @media not -moz-pref("sidebar.verticalTabs") {
       tab-group:not([collapsed]) > &::after {
         display: none !important;
       }

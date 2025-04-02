@@ -14,7 +14,7 @@
 }
 
 /* dark mode enabled in private browsing. */
-@media (-moz-bool-pref: "browser.theme.dark-private-windows") {
+@media -moz-pref("browser.theme.dark-private-windows") {
 	:root[privatebrowsingmode="temporary"],
 	:root[privatebrowsingmode="temporary"] #nav-bar,
 	:root[privatebrowsingmode="temporary"] #PersonalToolbar {
@@ -312,7 +312,7 @@ window#places {
 #appMenu-zoomEnlarge-button2:not([disabled], [open], :active):is(:hover),
 #appMenu-fullscreen-button2:not([disabled], [open], :active):is(:hover),
 #appMenu-zoomReset-button2:not([disabled], [open], :active):is(:hover) {
-  background-color: var(--panel-item-hover-bgcolor) !important;
+  background-color: var(--panel-banner-item-hover-bgcolor) !important;
 }
 
 #appMenu-zoomReduce-button2:not([disabled]):is([open], :hover:active),
@@ -512,7 +512,7 @@ window#places {
 }
 
 #PopupAutoComplete .autocomplete-richlistitem:hover {
-  background-color: var(--panel-item-hover-bgcolor) !important;
+  background-color: var(--panel-banner-item-hover-bgcolor) !important;
 }
 
 #PopupAutoComplete .autocomplete-richlistitem[selected] {
@@ -671,7 +671,7 @@ menupopup menu:hover:not([disabled=true]),
 menupopup menuitem:hover:not([disabled=true]),
 menupopup menu[_moz-menuactive]:not([disabled=true]),
 menupopup menuitem[_moz-menuactive]:not([disabled=true]) {
-  background-color: var(--panel-item-hover-bgcolor) !important;
+  background-color: var(--panel-banner-item-hover-bgcolor) !important;
   color: inherit !important;
 }
 
@@ -701,7 +701,6 @@ panel menuseparator,
 menupopup menu,
 menupopup menuitem,
 menupopup menucaption,
-
 #PopupAutoComplete>richlistbox>richlistitem,
 #PopupSearchAutoComplete .autocomplete-richlistitem {
   padding: var(--fp-contextmenu-menuitem-padding-block) var(--fp-contextmenu-menuitem-padding-inline) !important;
@@ -832,7 +831,7 @@ menuitem[checked="true"]>.menu-iconic-left,
   fill: var(--lwt-toolbarbutton-icon-fill-attention, var(--toolbarbutton-icon-fill-attention, currentColor)) !important;
 }
 
-@media (-moz-bool-pref: "fp.tweak.sidebar-enabled") {
+@media -moz-pref("fp.tweak.sidebar-enabled") {
   :not(menupopup:not(#contentAreaContextMenu) > menuitem)[id^="sidebartabs_asamuzak_jp-menuitem-"]>.menu-text {
     margin-left: -20px !important;
   }
@@ -846,7 +845,7 @@ menuitem[checked="true"]>.menu-iconic-left,
   }
 
   #tabbrowser-tabbox {  
-    @media (-moz-bool-pref: "sidebar.revamp") {
+    @media -moz-pref("sidebar.revamp") {
       outline: 0px solid transparent !important;
       box-shadow: none !important
     }

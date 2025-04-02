@@ -142,7 +142,7 @@ url-prefix("about:home") {
     --fp-wordmark-color: light-dark(#737373, #fff);
     --fp-background-color-secondary: light-dark(#fff, #4a4a4a);
 
-    @media (-moz-bool-pref: "browser.theme.dark-private-windows") {
+    @media -moz-pref("browser.theme.dark-private-windows") {
       color-scheme: dark !important;
     }
   }

@@ -21,7 +21,7 @@
 	}
 }
 
-@media (-moz-bool-pref: "fp.tweak.macos-button") {
+@media -moz-pref("fp.tweak.macos-button") {
 	.titlebar-min {
 		list-style-image: url("mac-minimize.svg") !important;
 	}

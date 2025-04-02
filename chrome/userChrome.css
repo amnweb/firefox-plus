@@ -5,4 +5,4 @@
 @import url("toolbar/searchbar.css");
 @import url("global/general.css");
 @import url("icons/icons.css");
-@import url("global/rounded-corners.css") (-moz-bool-pref: "fp.tweak.rounded-corners");
+@import url("global/rounded-corners.css") -moz-pref("fp.tweak.rounded-corners");
