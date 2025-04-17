@@ -598,15 +598,15 @@
 
 /* tab sound icons */
 .tab-icon-overlay[soundplaying] {
-	list-style-image: url("tab-audio-playing-small.svg") !important;
+	list-style-image: url("media-unmute.svg") !important;
 }
 
 .tab-icon-overlay[muted] {
-	list-style-image: url("tab-audio-muted-small.svg") !important;
+	list-style-image: url("media-mute.svg") !important;
 }
 
 .tab-icon-overlay[activemedia-blocked] {
-	list-style-image: url("tab-audio-blocked-small.svg") !important;
+	list-style-image: url("autoplay-media.svg") !important;
 }
 
 /* reload/stop animation */

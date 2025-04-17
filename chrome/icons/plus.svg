@@ -1,3 +1,7 @@
-<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="context-fill" fill-opacity="context-fill-opacity">
-  <path d="M7.5.5A.5.5 0 0 0 7 1v6H1a.5.5 0 0 0-.5.5.5.5 0 0 0 .5.5h6v6a.5.5 0 0 0 .5.5.5.5 0 0 0 .5-.5V8h6a.5.5 0 0 0 .5-.5.5.5 0 0 0-.5-.5H8V1a.5.5 0 0 0-.5-.5z"/>
+<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill-opacity="context-fill-opacity" fill="context-fill">
+
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_1" d="m8,1a0.5,0.5 0 0 0 -0.5,0.5l0,6l-6,0a0.5,0.5 0 0 0 -0.5,0.5a0.5,0.5 0 0 0 0.5,0.5l6,0l0,6a0.5,0.5 0 0 0 0.5,0.5a0.5,0.5 0 0 0 0.5,-0.5l0,-6l6,0a0.5,0.5 0 0 0 0.5,-0.5a0.5,0.5 0 0 0 -0.5,-0.5l-6,0l0,-6a0.5,0.5 0 0 0 -0.5,-0.5z"/>
+ </g>
 </svg>
