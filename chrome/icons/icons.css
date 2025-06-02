@@ -1135,3 +1135,7 @@ menuitem[id="placesContext_new:separator"] {
 			var(--fp-contextmenu-menuicon-margin-inline)
 	) !important;
 }
+/* new*/
+#placesContext_paste,
+#context-paste-no-formatting{
+	--menu-image: url("edit-paste.svg");
