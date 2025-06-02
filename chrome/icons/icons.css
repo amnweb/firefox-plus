@@ -109,10 +109,6 @@
 	list-style-image: url("close.svg") !important;
 }
 
-.tab-close-button:not([pinned]) {
-	display: inline-flex !important;
-	list-style-image: url("close-9px.svg") !important;
-}
 
 #sidebar-button {
 	list-style-image: url("sidebars-right.svg") !important;
@@ -598,15 +594,15 @@
 
 /* tab sound icons */
 .tab-icon-overlay[soundplaying] {
-	list-style-image: url("media-unmute.svg") !important;
+	list-style-image: url("tab-audio-playing-small.svg") !important;
 }
 
 .tab-icon-overlay[muted] {
-	list-style-image: url("media-mute.svg") !important;
+	list-style-image: url("tab-audio-muted-small.svg") !important;
 }
 
 .tab-icon-overlay[activemedia-blocked] {
-	list-style-image: url("autoplay-media.svg") !important;
+	list-style-image: url("tab-audio-blocked-small.svg") !important;
 }
 
 /* reload/stop animation */
@@ -700,6 +696,10 @@ menuitem > .menu-iconic-text {
 #toolbar-context-undoCloseTab {
 	--menu-image: url("edit-undo.svg");
 }
+
+#context_unloadTab{
+	--menu-image: url("unloadTab.svg");
+}
 #toggle_toolbar-menubar {
 	--menu-image: url("menu-bar.svg");
 }
@@ -757,6 +757,10 @@ menuitem[id="placesContext_deleteHost"] {
 
 #context-take-screenshot {
 	--menu-image: url("screenshot.svg");
+}
+
+#context-ask-chat {
+	--menu-image: url("ask-chat.svg");
 }
 
 #context-viewsource {
@@ -831,7 +835,8 @@ menuitem[id="placesContext_deleteHost"] {
 }
 
 #context-setDesktopBackground,
-.viewCustomizeToolbar {
+#toolbar-context-customize,
+#toolbar-context-customize-sidebar {
 	--menu-image: url("customize.svg");
 }
 
@@ -861,6 +866,15 @@ menuitem[id="placesContext_openBookmarkContainer:tabs"] {
 #context_openANewTab,
 #toolbar-context-openANewTab {
 	--menu-image: url("new-tab-image.svg");
+}
+
+#context_moveTabToGroup,
+#context_moveTabToNewGroup{
+	--menu-image: url("moveTabToGroup.svg");
+}
+	
+#context_ungroupTab{
+	--menu-image: url("ungroupTab.svg");
 }
 
 #context-openlinkinusercontext-menu,
