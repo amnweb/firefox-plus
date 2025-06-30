@@ -1,5 +1,5 @@
 # Firefox Plus (Windows only)
-> **Note:** FireFox v137+ only
+> **Note:** FireFox v140+ only
 
 <img src="screenshots/firefox-26-11-2023.jpg" alt="screenshot" title="Screenshot" width="900">
 <img src="screenshots/firefox-25-11-2023.jpg" alt="screenshot" title="Screenshot" width="900">
