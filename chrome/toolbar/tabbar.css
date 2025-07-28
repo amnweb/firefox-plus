@@ -310,8 +310,20 @@
 	display: none !important;
 }
 /* Tasb groups */
-#tabbrowser-arrowscrollbox {
+ 
+#pinned-tabs-container[orient="horizontal"] {
     margin-inline-start: 14px !important;
+    margin-inline-end: 0 !important;
+}
+#tabbrowser-tabs:has(#pinned-tabs-container:empty) #tabbrowser-arrowscrollbox {
+    margin-inline-start: 14px !important;
+}
+
+#tabbrowser-tabs:has(#pinned-tabs-container:not(:empty)) #tabbrowser-arrowscrollbox {
+    margin-inline-start: 0 !important;
+}
+
+#tabbrowser-tabs>#tabbrowser-arrowscrollbox {
     margin-inline-end: 6px !important;
 }
 .tab-group-label {
