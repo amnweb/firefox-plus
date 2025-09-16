@@ -131,6 +131,7 @@
 }
 
 #urlbar-background,
+.urlbar-background,
 #searchbar {
 	border-radius: var(--urlbar-icon-border-radius) !important;
 }
