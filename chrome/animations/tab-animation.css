@@ -1,0 +1,10 @@
+  #tabbrowser-tabpanels > hbox {
+    transition: all 0.2s;
+    scale: 1.01 !important;
+    filter: blur(4px) !important;
+  }
+
+  #tabbrowser-tabpanels > hbox.deck-selected  {
+    scale: 1 !important;
+    filter: none !important;
+  }

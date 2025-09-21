@@ -21,6 +21,7 @@
 - To enable macOS button style, open `user.js`, find `fp.tweak.macos-button` and set it to `true`.  
 - To disable bookmarks autohide open `user.js`, find `fp.tweak.autohide-bookmarks` and set it to `false`.
 - To enable or disable rounded corners, open `user.js`, find `fp.tweak.rounded-corners` and set it to `true` or `false`.  
+- To enable or disable tab switch animation, open `user.js`, find `fp.tweak.animation.tab-switch` and set it to `true` or `false`.  
 - To enable or disable White Mode, open `user.js`, find `browser.in-content.dark-mode` and set it to `true` or `false`. Then find and set `ui.systemUsesDarkTheme` to `1` or `0`.
 
 ***

@@ -92,6 +92,11 @@ Get-ChildItem -Path $firefoxProfilesPath | ForEach-Object {
             "type"  = "boolean"
         },
         [PSCustomObject]@{
+            "line"  = "user_pref(`"fp.tweak.animation.tab-switch`", true);"
+            "desc"  = "Enable tab switch animation"
+            "type"  = "boolean"
+        },
+        [PSCustomObject]@{
             "line"  = "user_pref(`"app.update.auto`", false);"
             "desc"  = "Enable Firefox autoupdate"
             "type"  = "boolean"
