@@ -23,26 +23,32 @@
 
 @media -moz-pref("fp.tweak.macos-button") {
 	.titlebar-min {
-		list-style-image: url("mac-minimize.svg") !important;
+		content:"" !important;
+        color: #fcc13c !important;
 	}
 	.titlebar-close {
 		margin-right: 4px !important;
+        color: #fc6158 !important;
 	}
 	.titlebar-max {
-		list-style-image: url("mac-maximize.svg") !important;
+		content:"" !important;
+        color: #32d347 !important;
 	}
 
 	.titlebar-restore {
-		list-style-image: url("mac-restore.svg") !important;
+		content:"" !important;
+        color: #32d347 !important;
 	}
 
 	.titlebar-close {
-		list-style-image: url("mac-close.svg") !important;
+		content:"" !important;
+        color: #fc6158 !important;
 	}
 	@media (max-resolution: 1dppx) {
 		toolbar[brighttext] .titlebar-close,
 		.titlebar-close:hover {
-			list-style-image: url("mac-close.svg") !important;
+			content:"" !important;
+            color: #ff736c !important;
 		}
 	}
     .titlebar-buttonbox {
