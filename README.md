@@ -1,6 +1,8 @@
 # Firefox Plus (Windows only)
 > **Note:** FireFox v144+ only
 
+> **Maintainer note:** Active development is currently paused due to limited time. Thoughtful, well‑tested pull requests are warmly welcome. I will review and merge high‑quality PRs as my schedule permits. Thank you for your interest and contributions! 💙
+
 <img src="screenshots/firefox-26-11-2023.jpg" alt="screenshot" title="Screenshot" width="900">
 <img src="screenshots/firefox-25-11-2023.jpg" alt="screenshot" title="Screenshot" width="900">
 <img src="screenshots/Screenshot 2023-12-04 144143.png" alt="screenshot" title="Screenshot" width="900">
